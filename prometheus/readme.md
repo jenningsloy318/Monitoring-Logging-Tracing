@@ -173,3 +173,10 @@ if prometheus don't run on kubernetes or other platforms that has built-in servi
       title: "Alert: {{ .Status | toUpper }}  {{ .CommonAnnotations.summary }}\n"
       text: "{{range .Alerts }}\nDescription: {{ .Annotations.description }}\n{{ range .Labels.SortedPairs }} {{ .Name }}: {{ .Value }}\n{{end}}Metrics: <{{ .GeneratorURL}}| Click here>\n{{ end }}"
   ```
+
+* grafana 
+
+  * [MySQL/percona dashboards](https://github.com/percona/grafana-dashboards/tree/master/dashboards)
+  * [Confluence dashboard](./dashboards/Confluence_dashboard.json)
+  * [Jira dashboard](./dashboards/Jira_dashboard.json)
+  * [Host dashboard](./dashboards/Host_dashboard.json)
