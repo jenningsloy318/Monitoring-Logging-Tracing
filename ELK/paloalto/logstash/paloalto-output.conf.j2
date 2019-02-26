@@ -1,0 +1,11 @@
+output {
+  elasticsearch {
+    id => "paloalto-elasticsearch_multi"
+    codec => cef
+    hosts => ["{{ES_CLUSTER_INSTANCE_1}}:9200","{{ES_CLUSTER_INSTANCE_2}}:9200","{{ES_CLUSTER_INSTANCE_3}}:9200" ]
+    index => "paloalto-%{+YYYY.MM.dd}"
+    template => "/etc/logstash/paloalto/templates/paloalto.json"
+    template_name => "paloalto"
+    template_overwrite => "true"
+  }
+}

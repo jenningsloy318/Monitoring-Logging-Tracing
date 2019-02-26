@@ -1,0 +1,1610 @@
+{
+  "objects": [
+{
+  "id": "16a72e70-4543-11e7-9510-4b0b4978ab0e",
+  "type": "search",
+  "version": 1,
+  "attributes": {
+  "title": "DNS Events",
+  "description": "",
+  "hits": 0,
+  "columns": [
+    "deviceVendor",
+    "deviceProduct",
+    "applicationProtocol",
+    "categoryBehavior",
+    "categoryOutcome",
+    "destinationAddress",
+    "destinationDnsDomain",
+    "destinationPort",
+    "deviceCustomString1Label",
+    "deviceCustomString1",
+    "deviceCustomString3Label",
+    "deviceCustomString3",
+    "deviceCustomString4Label",
+    "deviceCustomString4",
+    "deviceEventCategory",
+    "deviceHostName",
+    "deviceSeverity",
+    "sourceAddress",
+    "sourcePort",
+    "transportProtocol"
+  ],
+  "sort": [
+    "deviceReceiptTime",
+    "desc"
+  ],
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"paloalto-*\",\"highlightAll\":true,\"version\":true,\"query\":{\"query_string\":{\"query\":\"deviceEventCategory:\\\"dns\\\"\",\"analyze_wildcard\":true}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "1d9ba830-3e47-11e7-af78-9fc514b4e118",
+  "type": "search",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Endpoint Event Explorer",
+  "description": "",
+  "hits": 0,
+  "columns": [
+    "categoryDeviceGroup",
+    "categoryTechnique",
+    "categoryOutcome",
+    "categorySignificance",
+    "categoryObject",
+    "categoryBehavior",
+    "categoryDeviceType"
+  ],
+  "sort": [
+    "deviceReceiptTime",
+    "desc"
+  ],
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"paloalto-*\",\"highlightAll\":true,\"version\":true,\"filter\":[],\"query\":{\"query_string\":{\"query\":\"categoryDeviceGroup:\\\"/Operating System\\\" OR categoryDeviceGroup:\\\"/IDS/Host\\\" OR categoryDeviceGroup:\\\"/Application\\\"\",\"analyze_wildcard\":true}}}"
+  }
+}
+},
+{
+  "id": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "type": "search",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Network Events",
+  "description": "",
+  "hits": 0,
+  "columns": [
+    "priority",
+    "name",
+    "sourceAddress",
+    "sourcePort",
+    "destinationAddress",
+    "destinationPort",
+    "applicationProtocol",
+    "message",
+    "categoryBehavior",
+    "categoryOutcome",
+    "deviceAddress",
+    "deviceProduct",
+    "deviceVendor",
+    "categoryDeviceGroup",
+    "categoryDeviceType"
+  ],
+  "sort": [
+    "deviceReceiptTime",
+    "desc"
+  ],
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"paloalto-*\",\"highlightAll\":true,\"version\":true,\"query\":{\"query_string\":{\"query\":\"categoryDeviceGroup:\\\"/Firewall\\\" OR categoryDeviceGroup:\\\"/IDS/Network\\\" OR categoryDeviceGroup:\\\"/VPN\\\"\",\"analyze_wildcard\":true}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "7a2fc9c0-454d-11e7-86b6-95298e9da6dc",
+  "type": "search",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Endpoint - OS Events",
+  "description": "",
+  "hits": 0,
+  "columns": [
+    "deviceVendor",
+    "deviceProduct",
+    "name",
+    "deviceEventClassId",
+    "deviceEventCategory",
+    "sourceUserName",
+    "destinationUserName",
+    "destinationHostName",
+    "categoryBehavior",
+    "categoryOutcome",
+    "sourceNtDomain",
+    "destinationNTDomain"
+  ],
+  "sort": [
+    "deviceReceiptTime",
+    "desc"
+  ],
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"paloalto-*\",\"highlightAll\":true,\"version\":true,\"filter\":[],\"query\":{\"query_string\":{\"query\":\"categoryDeviceGroup:\\\"/Operating System\\\"\",\"analyze_wildcard\":true}}}"
+  }
+}
+},
+{
+  "id": "bb1f4bc0-73fd-11e7-b4d0-0fc7dfb45744",
+  "type": "search",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Microsoft DNS Events",
+  "description": "",
+  "hits": 0,
+  "columns": [
+    "deviceVendor",
+    "deviceProduct",
+    "categoryBehavior",
+    "categoryOutcome",
+    "destinationAddress",
+    "destinationPort",
+    "destinationHostName",
+    "deviceEventClassId",
+    "deviceCustomString1Label",
+    "deviceCustomString1",
+    "deviceCustomString2Label",
+    "deviceCustomString2",
+    "deviceCustomString3Label",
+    "deviceCustomString3",
+    "deviceCustomString4Label",
+    "deviceCustomString4",
+    "deviceEventCategory",
+    "deviceSeverity",
+    "sourceAddress",
+    "sourcePort",
+    "transportProtocol",
+    "bytesIn",
+    "requestUrl"
+  ],
+  "sort": [
+    "deviceReceiptTime",
+    "desc"
+  ],
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"paloalto-*\",\"highlightAll\":true,\"version\":true,\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"deviceProduct:\\\"DNS Trace Log\\\"\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "039815b0-4548-11e7-a94a-5d0a73686c64",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "Top Destination Domains by Source Address",
+  "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customLabel\":\"Source Address(es)\",\"field\":\"sourceAddress\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":10},\"schema\":\"segment\",\"type\":\"terms\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"customLabel\":\"Destination Domain(s)\",\"field\":\"destinationDnsDomain\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":5},\"schema\":\"group\",\"type\":\"terms\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Source Address(es)\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"mode\":\"stacked\",\"show\":\"true\",\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"value\"}]},\"title\":\"Top Destination Domains by Source Address\",\"type\":\"histogram\"}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "16a72e70-4543-11e7-9510-4b0b4978ab0e",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "08ee04d0-4556-11e7-83ea-67cb6920446d",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Source Users by Destination Users",
+  "visState": "{\"title\":\"Top 10 Source Users by Destination Users [PaloAlto]\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"sourceUserName\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Source Users\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"destinationUserName\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Destination Users\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "7a2fc9c0-454d-11e7-86b6-95298e9da6dc",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "08f8cf10-3e57-11e7-96c4-0d3a291ec93a",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "Firewall - Navigation",
+  "visState": "{\"title\":\"Firewall - Navigation\",\"type\":\"markdown\",\"params\":{\"markdown\":\"### **Navigation Pane** ###\\n\\n[Firewall Devices Overview](#/dashboard/37af0b40-398d-11e7-ae19-21fb91585845)\\n\\n[Firewall Suspicious Activities](#/dashboard/82051450-3e56-11e7-96c4-0d3a291ec93a)\\n\\n[Endopint Overview](#dashboard/d2fa5030-3e5d-11e7-b212-897f1496dc0e)\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "0bdbb5a0-3e55-11e7-96c4-0d3a291ec93a",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Events by Source Addresses",
+  "visState": "{\"title\":\"Events by Source Addresses [PaloAlto]\",\"type\":\"metrics\",\"params\":{\"id\":\"e1a58ab0-3957-11e7-ae19-21fb91585845\",\"type\":\"timeseries\",\"series\":[{\"id\":\"8f58a280-395a-11e7-ae19-21fb91585845\",\"color\":\"rgba(211,49,21,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"8f58a281-395a-11e7-ae19-21fb91585845\",\"type\":\"count\"},{\"settings\":\"\",\"minimize\":0,\"window\":\"\",\"model\":\"simple\",\"sigma\":\"\",\"id\":\"140cf490-395b-11e7-ae19-21fb91585845\",\"type\":\"moving_average\",\"field\":\"8f58a281-395a-11e7-ae19-21fb91585845\"}],\"seperate_axis\":1,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":\"3\",\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"filter\":\"categoryDeviceGroup:\\\"/Firewall\\\" OR categoryDeviceGroup:\\\"/IDS/Network\\\" OR categoryDeviceGroup:\\\"/VPN\\\" \",\"terms_field\":\"deviceHostName\",\"terms_order_by\":null,\"label\":\"Events\",\"steps\":0,\"value_template\":\"{{value}}\"},{\"id\":\"3bb711b0-395b-11e7-ae19-21fb91585845\",\"color\":\"rgba(104,188,0,1)\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"3bb711b1-395b-11e7-ae19-21fb91585845\",\"type\":\"count\"},{\"settings\":\"\",\"minimize\":0,\"window\":\"\",\"model\":\"simple\",\"id\":\"4b515cc0-395b-11e7-ae19-21fb91585845\",\"type\":\"moving_average\",\"field\":\"3bb711b1-395b-11e7-ae19-21fb91585845\"}],\"seperate_axis\":1,\"axis_position\":\"left\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":\"0\",\"point_size\":1,\"fill\":\"0.5\",\"stacked\":\"none\",\"terms_field\":\"sourceAddress\",\"terms_size\":\"10\",\"label\":\"Top Source Addresses\"}],\"time_field\":\"deviceReceiptTime\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"bar_color_rules\":[{\"id\":\"e4772140-3957-11e7-ae19-21fb91585845\"}],\"background_color\":null,\"filter\":\"categoryDeviceGroup:\\\"/Firewall\\\" OR categoryDeviceGroup:\\\"/IDS/Network\\\" OR categoryDeviceGroup:\\\"/VPN\\\" \",\"background_color_rules\":[{\"id\":\"837bfbb0-395a-11e7-ae19-21fb91585845\"}],\"gauge_color_rules\":[{\"id\":\"8970f250-395a-11e7-ae19-21fb91585845\"}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "0e4558b0-4552-11e7-86b6-95298e9da6dc",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Endpoint - OS Average EPS",
+  "visState": "{\"title\":\"Endpoint - OS Average EPS [PaloAlto]\",\"type\":\"metrics\",\"params\":{\"id\":\"3f2cf630-3e4b-11e7-af78-9fc514b4e118\",\"type\":\"gauge\",\"series\":[{\"id\":\"3f2cf631-3e4b-11e7-af78-9fc514b4e118\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"3f2cf632-3e4b-11e7-af78-9fc514b4e118\",\"type\":\"count\"},{\"id\":\"2f12f3d0-7dc5-11e7-95f6-690ab80d4e85\",\"type\":\"cumulative_sum\",\"field\":\"3f2cf632-3e4b-11e7-af78-9fc514b4e118\"},{\"unit\":\"1s\",\"id\":\"330d7a00-7dc5-11e7-95f6-690ab80d4e85\",\"type\":\"derivative\",\"field\":\"2f12f3d0-7dc5-11e7-95f6-690ab80d4e85\"},{\"settings\":\"\",\"minimize\":0,\"window\":\"\",\"model\":\"simple\",\"id\":\"373fd910-7dc5-11e7-95f6-690ab80d4e85\",\"type\":\"moving_average\",\"field\":\"330d7a00-7dc5-11e7-95f6-690ab80d4e85\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Event Throughput\",\"offset_time\":\"1m\",\"value_template\":\"{{value}} / s\"}],\"time_field\":\"deviceReceiptTime\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"bar_color_rules\":[{\"id\":\"527ca820-3e4b-11e7-af78-9fc514b4e118\"}],\"gauge_color_rules\":[{\"id\":\"52cee6d0-3e4b-11e7-af78-9fc514b4e118\"}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"filter\":\"categoryDeviceGroup:\\\"/Operating System\\\"\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "1439a5e0-3e69-11e7-899c-f940f646009b",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "Endpoint - Navigation",
+  "visState": "{\"title\":\"Endpoint - Navigation\",\"type\":\"markdown\",\"params\":{\"markdown\":\"### **Navigation Pane** ###\\n\\n[Endopint Overview](#dashboard/d2fa5030-3e5d-11e7-b212-897f1496dc0e)\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "154ff7e0-3987-11e7-8b9d-ddc45b5f6d00",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Device Type Breakdown",
+  "visState": "{\"title\":\"Device Type Breakdown [PaloAlto]\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"categoryDeviceType\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Firewall Types\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "161e27e0-3988-11e7-8b9d-ddc45b5f6d00",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Device Metrics Overview",
+  "visState": "{\"title\":\"Device Metrics Overview [PaloAlto]\",\"type\":\"metric\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"fontSize\":\"30\",\"gauge\":{\"autoExtend\":false,\"backStyle\":\"Full\",\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":100}],\"gaugeColorMode\":\"None\",\"gaugeStyle\":\"Full\",\"gaugeType\":\"Metric\",\"invertColors\":false,\"labels\":{\"color\":\"black\",\"show\":true},\"orientation\":\"vertical\",\"percentageMode\":false,\"scale\":{\"color\":\"#333\",\"labels\":false,\"show\":false,\"width\":2},\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":\"12\",\"labelColor\":false,\"subText\":\"\"},\"type\":\"simple\",\"useRange\":false,\"verticalSplit\":false},\"handleNoResults\":true,\"type\":\"gauge\"},\"aggs\":[{\"id\":\"8\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Event Count\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"deviceHostName\",\"customLabel\":\"Devices\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"sourceAddress\",\"customLabel\":\"Sources\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"destinationAddress\",\"customLabel\":\"Destinations\"}},{\"id\":\"7\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"destinationPort\",\"customLabel\":\"Ports\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "1bde8be0-3e68-11e7-899c-f940f646009b",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Device Types by Vendor",
+  "visState": "{\"title\":\"Device Types by Vendor [PaloAlto]\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"categoryDeviceType\",\"exclude\":\"Network-based IDS/IPS\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"deviceVendor\",\"exclude\":\"\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "1d9ba830-3e47-11e7-af78-9fc514b4e118",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "1c54cda0-752c-11e7-9445-91c40765092f",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Event Types",
+  "visState": "{\"title\":\"Top 10 Event Types [PaloAlto]\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"square root\",\"orientation\":\"single\",\"minFontSize\":18,\"maxFontSize\":72},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"deviceEventClassId\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "bb1f4bc0-73fd-11e7-b4d0-0fc7dfb45744",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "1de45d60-7523-11e7-9445-91c40765092f",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: DNS Metrics Overview",
+  "visState": "{\"title\":\"DNS Metrics Overview [PaloAlto]\",\"type\":\"metric\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"gauge\":{\"autoExtend\":false,\"backStyle\":\"Full\",\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":100}],\"gaugeColorMode\":\"None\",\"gaugeStyle\":\"Full\",\"gaugeType\":\"Metric\",\"invertColors\":false,\"labels\":{\"color\":\"black\",\"show\":true},\"orientation\":\"vertical\",\"percentageMode\":false,\"scale\":{\"color\":\"#333\",\"labels\":false,\"show\":false,\"width\":2},\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":\"32\",\"labelColor\":false,\"subText\":\"\"},\"type\":\"simple\",\"useRange\":false,\"verticalSplit\":false},\"type\":\"gauge\"},\"aggs\":[{\"id\":\"5\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Event Count\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"deviceCustomString1\",\"customLabel\":\"Threads\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"deviceCustomString2\",\"customLabel\":\"OpCodes\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"deviceEventClassId\",\"customLabel\":\"Activity Types\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}}",
+  "description": "",
+  "savedSearchId": "bb1f4bc0-73fd-11e7-b4d0-0fc7dfb45744",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "2a33c810-3e4d-11e7-af78-9fc514b4e118",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top Destination Locations by Event",
+  "visState": "{\"title\":\"Top Destination Locations by Event [PaloAlto]\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Shaded Circle Markers\",\"isDesaturated\":true,\"addTooltip\":true,\"heatMaxZoom\":0,\"heatMinOpacity\":0.1,\"heatRadius\":25,\"heatBlur\":15,\"heatNormalizeData\":true,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"url\":\"https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer\",\"options\":{\"version\":\"1.3.0\",\"layers\":\"0\",\"format\":\"image/png\",\"transparent\":true,\"attribution\":\"Maps provided by USGS\",\"styles\":\"\"}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"destination.location\",\"autoPrecision\":true,\"useGeocentroid\":true,\"precision\":2}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "1d9ba830-3e47-11e7-af78-9fc514b4e118",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "2b369910-4553-11e7-83ea-67cb6920446d",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 15 Event Types by Events",
+  "visState": "{\"title\":\"Top 15 Event Types by Events [PaloAlto]\",\"type\":\"table\",\"params\":{\"perPage\":15,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"categoryBehavior\",\"size\":15,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Event Types\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"sourceUserName\",\"customLabel\":\"Source Users\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"destinationUserName\",\"customLabel\":\"Destination Users\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"sourceHostName\",\"customLabel\":\"Source Hosts\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"destinationHostName\",\"customLabel\":\"Destination Hosts\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+  "description": "",
+  "savedSearchId": "7a2fc9c0-454d-11e7-86b6-95298e9da6dc",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "31b85570-454a-11e7-86b6-95298e9da6dc",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Dashboard Navigation",
+  "visState": "{\"title\":\"PaloAlto: Dashboard Navigation\",\"type\":\"markdown\",\"params\":{\"markdown\":\"[Network Overview](#/dashboard/37af0b40-398d-11e7-ae19-21fb91585845) | [Network Suspicious Activity](#/dashboard/82051450-3e56-11e7-96c4-0d3a291ec93a) | [Endpoint Overview](#dashboard/d2fa5030-3e5d-11e7-b212-897f1496dc0e) | [Endpoint OS Activity](#/dashboard/64c92510-4555-11e7-83ea-67cb6920446d) | [Microsoft DNS Overview](#/dashboard/153e0bf0-752f-11e7-ae68-d756b92f3a9c)\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "35ce1310-3989-11e7-8b9d-ddc45b5f6d00",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top Source Locations by Events",
+  "visState": "{\"title\":\"Top Source Locations by Events [PaloAlto]\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Shaded Circle Markers\",\"isDesaturated\":true,\"addTooltip\":true,\"heatMaxZoom\":0,\"heatMinOpacity\":0.1,\"heatRadius\":25,\"heatBlur\":15,\"heatNormalizeData\":true,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"url\":\"https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer\",\"options\":{\"version\":\"1.3.0\",\"layers\":\"0\",\"format\":\"image/png\",\"transparent\":true,\"attribution\":\"Maps provided by USGS\",\"styles\":\"\"}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Event Count\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"source.location\",\"autoPrecision\":true,\"useGeocentroid\":true,\"precision\":2,\"customLabel\":\"Source Location\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "4303de60-752b-11e7-9445-91c40765092f",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Destinations by Size",
+  "visState": "{\"title\":\"Top 10 Destinations by Size [PaloAlto]\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"destinationHostName\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Destinations\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytesIn\",\"customLabel\":\"Bytes\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"sourceAddress\",\"customLabel\":\"Sources\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Count\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+  "description": "",
+  "savedSearchId": "bb1f4bc0-73fd-11e7-b4d0-0fc7dfb45744",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "45387480-3989-11e7-8b9d-ddc45b5f6d00",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top Destination Locations by Events",
+  "visState": "{\"title\":\"Top Destination Locations by Events [PaloAlto]\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Shaded Circle Markers\",\"isDesaturated\":true,\"addTooltip\":true,\"heatMaxZoom\":0,\"heatMinOpacity\":0.1,\"heatRadius\":25,\"heatBlur\":15,\"heatNormalizeData\":true,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"url\":\"https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer\",\"options\":{\"version\":\"1.3.0\",\"layers\":\"0\",\"format\":\"image/png\",\"transparent\":true,\"attribution\":\"Maps provided by USGS\",\"styles\":\"\"}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Event Count\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"destination.location\",\"autoPrecision\":true,\"useGeocentroid\":true,\"precision\":2,\"customLabel\":\"Destination Location\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "463fc740-454e-11e7-86b6-95298e9da6dc",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Endpoint OS Metrics Overview",
+  "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customLabel\":\"Total Events\"},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"6\",\"params\":{\"customLabel\":\"Devices\",\"field\":\"deviceHostName\"},\"schema\":\"metric\",\"type\":\"cardinality\"},{\"enabled\":true,\"id\":\"7\",\"params\":{\"customLabel\":\"Event Types\",\"field\":\"categoryBehavior\"},\"schema\":\"metric\",\"type\":\"cardinality\"},{\"enabled\":true,\"id\":\"8\",\"params\":{\"customLabel\":\"Event Outcomes\",\"field\":\"categoryOutcome\"},\"schema\":\"metric\",\"type\":\"cardinality\"}],\"listeners\":{},\"params\":{\"addLegend\":false,\"addTooltip\":true,\"fontSize\":\"30\",\"gauge\":{\"autoExtend\":false,\"backStyle\":\"Full\",\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":100}],\"gaugeColorMode\":\"None\",\"gaugeStyle\":\"Full\",\"gaugeType\":\"Metric\",\"invertColors\":false,\"labels\":{\"color\":\"black\",\"show\":true},\"orientation\":\"vertical\",\"percentageMode\":false,\"scale\":{\"color\":\"#333\",\"labels\":false,\"show\":false,\"width\":2},\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":\"20\",\"labelColor\":false,\"subText\":\"\"},\"type\":\"simple\",\"useRange\":false,\"verticalSplit\":false},\"handleNoResults\":true,\"type\":\"gauge\"},\"title\":\"Endpoint OS Metrics Overview [PaloAlto]\",\"type\":\"metric\"}",
+  "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}}",
+  "description": "",
+  "savedSearchId": "7a2fc9c0-454d-11e7-86b6-95298e9da6dc",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "47c2a140-454f-11e7-86b6-95298e9da6dc",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Events by Source and Destination Users",
+  "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customLabel\":\"Event Count\"},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customInterval\":\"2h\",\"customLabel\":\"Timestamp\",\"extended_bounds\":{},\"field\":\"deviceReceiptTime\",\"interval\":\"auto\",\"min_doc_count\":1},\"schema\":\"segment\",\"type\":\"date_histogram\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"customLabel\":\"Source Users\",\"field\":\"sourceUserName\"},\"schema\":\"metric\",\"type\":\"cardinality\"},{\"enabled\":true,\"id\":\"4\",\"params\":{\"customLabel\":\"Destination Users\",\"field\":\"destinationUserName\"},\"schema\":\"metric\",\"type\":\"cardinality\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Timestamp\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Event Count\"},\"drawLinesBetweenPoints\":true,\"mode\":\"stacked\",\"show\":\"true\",\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"},{\"data\":{\"id\":\"3\",\"label\":\"Source Users\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"lineWidth\":3,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-2\"},{\"data\":{\"id\":\"4\",\"label\":\"Destination Users\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"lineWidth\":3,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-2\"}],\"setYExtents\":false,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Event Count\"},\"type\":\"value\"},{\"id\":\"ValueAxis-2\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"RightAxis-1\",\"position\":\"right\",\"scale\":{\"mode\":\"normal\",\"type\":\"square root\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"\"},\"type\":\"value\"}]},\"title\":\"Events by Source and Destination Users [PaloAlto]\",\"type\":\"histogram\"}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "7a2fc9c0-454d-11e7-86b6-95298e9da6dc",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "49953800-4547-11e7-a94a-5d0a73686c64",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "Top Destination Domains",
+  "visState": "{\"title\":\"Top Destination Domains\",\"type\":\"metrics\",\"params\":{\"id\":\"45479ab0-4545-11e7-a94a-5d0a73686c64\",\"type\":\"top_n\",\"series\":[{\"id\":\"45479ab1-4545-11e7-a94a-5d0a73686c64\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"45479ab2-4545-11e7-a94a-5d0a73686c64\",\"type\":\"count\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":\"0.3\",\"stacked\":\"none\",\"label\":\"Top Destination Domains\",\"terms_field\":\"destinationDnsDomain\"}],\"time_field\":\"deviceReceiptTime\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"filter\":\"deviceEventCategory:\\\"dns\\\"\",\"background_color_rules\":[{\"id\":\"efe6b130-4546-11e7-a94a-5d0a73686c64\"}],\"bar_color_rules\":[{\"id\":\"f596fdb0-4546-11e7-a94a-5d0a73686c64\"}]},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "4cf91f90-3d5c-11e7-8b9d-ddc45b5f6d00",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "Firewall - Devices - Top EPS by Category Device Type",
+  "visState": "{\"title\":\"Firewall - Devices - Top EPS by Category Device Type\",\"type\":\"metrics\",\"params\":{\"id\":\"429af7e0-3d5b-11e7-8b9d-ddc45b5f6d00\",\"type\":\"top_n\",\"series\":[{\"id\":\"429af7e1-3d5b-11e7-8b9d-ddc45b5f6d00\",\"color\":\"rgba(252,220,0,1)\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"429af7e2-3d5b-11e7-8b9d-ddc45b5f6d00\",\"type\":\"count\"},{\"settings\":\"\",\"minimize\":0,\"window\":\"\",\"model\":\"linear\",\"unit\":\"\",\"id\":\"112da8a0-3d5c-11e7-8b9d-ddc45b5f6d00\",\"type\":\"moving_average\",\"field\":\"429af7e2-3d5b-11e7-8b9d-ddc45b5f6d00\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Top EPS contributors by Category Device Type\",\"value_template\":\"{{value}}/s\",\"terms_field\":\"categoryDeviceType\"}],\"time_field\":\"deviceReceiptTime\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"filter\":\"categoryDeviceGroup:\\\"/Firewall\\\"\",\"bar_color_rules\":[{\"id\":\"77dd4e80-3d5b-11e7-8b9d-ddc45b5f6d00\"}],\"background_color_rules\":[{\"id\":\"798c5e10-3d5b-11e7-8b9d-ddc45b5f6d00\"}],\"gauge_color_rules\":[{\"value\":0,\"id\":\"988f35d0-3d5b-11e7-8b9d-ddc45b5f6d00\",\"gauge\":null}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"gauge_max\":\"\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "4ee62420-7523-11e7-871d-5f0fb978413c",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: DNS - Event Throughput",
+  "visState": "{\"title\":\"DNS - Event Throughput [PaloAlto]\",\"type\":\"metrics\",\"params\":{\"id\":\"429af7e0-3d5b-11e7-8b9d-ddc45b5f6d00\",\"type\":\"gauge\",\"series\":[{\"id\":\"429af7e1-3d5b-11e7-8b9d-ddc45b5f6d00\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"429af7e2-3d5b-11e7-8b9d-ddc45b5f6d00\",\"type\":\"count\"},{\"id\":\"6497aaa0-7dc5-11e7-95f6-690ab80d4e85\",\"type\":\"cumulative_sum\",\"field\":\"429af7e2-3d5b-11e7-8b9d-ddc45b5f6d00\"},{\"unit\":\"1s\",\"id\":\"6800ed50-7dc5-11e7-95f6-690ab80d4e85\",\"type\":\"derivative\",\"field\":\"6497aaa0-7dc5-11e7-95f6-690ab80d4e85\"},{\"settings\":\"\",\"minimize\":0,\"window\":\"\",\"model\":\"simple\",\"id\":\"6cf98290-7dc5-11e7-95f6-690ab80d4e85\",\"type\":\"moving_average\",\"field\":\"6800ed50-7dc5-11e7-95f6-690ab80d4e85\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Event Throughput\",\"value_template\":\"{{value}}  / s\"}],\"time_field\":\"deviceReceiptTime\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"filter\":\"deviceProduct:\\\"DNS Trace Log\\\"\",\"bar_color_rules\":[{\"id\":\"77dd4e80-3d5b-11e7-8b9d-ddc45b5f6d00\"}],\"background_color_rules\":[{\"id\":\"798c5e10-3d5b-11e7-8b9d-ddc45b5f6d00\"}],\"gauge_color_rules\":[{\"value\":0,\"id\":\"988f35d0-3d5b-11e7-8b9d-ddc45b5f6d00\",\"gauge\":null}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"gauge_max\":\"\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "4ff86ee0-4549-11e7-86b6-95298e9da6dc",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "Top Source Address",
+  "visState": "{\"title\":\"Top Source Address\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"square root\",\"orientation\":\"single\",\"minFontSize\":11,\"maxFontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"sourceAddress\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Source Addresses\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "16a72e70-4543-11e7-9510-4b0b4978ab0e",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "5acacad0-3986-11e7-8b9d-ddc45b5f6d00",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "Firewall - Devices - Event Outcome over Time",
+  "visState": "{\"title\":\"Firewall - Devices - Event Outcome over Time\",\"type\":\"area\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Time\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"mode\":\"normal\",\"show\":\"true\",\"showCircles\":true,\"type\":\"area\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Count\"},\"type\":\"value\"}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"deviceReceiptTime\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"categoryOutcome\",\"size\":2,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Event Outcome\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"colors\":{\"/Failure\":\"#BF1B00\",\"/Success\":\"#629E51\"}}}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "5acb74d0-398b-11e7-ae19-21fb91585845",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Events by Device Types",
+  "visState": "{\"title\":\"Events by Device Types [PaloAlto]\",\"type\":\"metrics\",\"params\":{\"id\":\"e1a58ab0-3957-11e7-ae19-21fb91585845\",\"type\":\"timeseries\",\"series\":[{\"id\":\"8f58a280-395a-11e7-ae19-21fb91585845\",\"color\":\"rgba(211,49,21,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"8f58a281-395a-11e7-ae19-21fb91585845\",\"type\":\"count\"},{\"settings\":\"\",\"minimize\":0,\"window\":\"\",\"model\":\"simple\",\"sigma\":\"\",\"id\":\"140cf490-395b-11e7-ae19-21fb91585845\",\"type\":\"moving_average\",\"field\":\"8f58a281-395a-11e7-ae19-21fb91585845\"}],\"seperate_axis\":1,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":\"3\",\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"filter\":\"\",\"terms_field\":\"deviceHostName\",\"terms_order_by\":null,\"label\":\"Events\",\"steps\":0,\"split_filters\":[{\"filter\":\"categoryDeviceGroup:\\\"/Firewall\\\"\",\"label\":\"Firewall\",\"color\":\"rgba(244,78,59,1)\",\"id\":\"e403ef60-4684-11e7-8ffc-b5cec7c0edbb\"}]},{\"id\":\"3bb711b0-395b-11e7-ae19-21fb91585845\",\"color\":\"rgba(251,158,0,1)\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"3bb711b1-395b-11e7-ae19-21fb91585845\",\"type\":\"count\"},{\"settings\":\"\",\"minimize\":0,\"window\":\"\",\"model\":\"simple\",\"id\":\"4b515cc0-395b-11e7-ae19-21fb91585845\",\"type\":\"moving_average\",\"field\":\"3bb711b1-395b-11e7-ae19-21fb91585845\"}],\"seperate_axis\":1,\"axis_position\":\"left\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"categoryDeviceType\",\"terms_size\":\"10\",\"label\":\"Top Device Types by Mvg Averages\"}],\"time_field\":\"deviceReceiptTime\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"bar_color_rules\":[{\"id\":\"e4772140-3957-11e7-ae19-21fb91585845\"}],\"background_color\":null,\"filter\":\"categoryDeviceType:\\\"Firewall\\\" OR categoryDeviceGroup:\\\"/IDS/Network\\\" OR categoryDeviceGroup:\\\"/VPN\\\"\",\"background_color_rules\":[{\"id\":\"837bfbb0-395a-11e7-ae19-21fb91585845\"}],\"gauge_color_rules\":[{\"id\":\"8970f250-395a-11e7-ae19-21fb91585845\"}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "6414e6b0-4549-11e7-86b6-95298e9da6dc",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "Top Destination Domain",
+  "visState": "{\"title\":\"Top Destination Domain\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"square root\",\"orientation\":\"single\",\"minFontSize\":11,\"maxFontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"destinationDnsDomain\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"DNS Domains\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "16a72e70-4543-11e7-9510-4b0b4978ab0e",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "68180c80-4556-11e7-83ea-67cb6920446d",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Sources by Destinations",
+  "visState": "{\"title\":\"Top 10 Sources by Destinations [PaloAlto]\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"sourceHostName\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Source Host\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"destinationHostName\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Destination Host\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "7a2fc9c0-454d-11e7-86b6-95298e9da6dc",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "6bb7d0e0-4548-11e7-a94a-5d0a73686c64",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "Query Type by Device",
+  "visState": "{\"title\":\"Query Type by Device\",\"type\":\"heatmap\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"enableHover\":false,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":4,\"colorSchema\":\"Yellow to Red\",\"setColorRange\":false,\"colorsRange\":[],\"invertColors\":false,\"percentageMode\":false,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":false,\"rotate\":0,\"color\":\"#555\"}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Event Count\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"deviceHostName\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"DNS Device\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"deviceCustomString1\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"DNS Query Types\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 33\":\"rgb(255,255,204)\",\"33 - 65\":\"rgb(254,217,118)\",\"65 - 98\":\"rgb(253,141,60)\",\"98 - 130\":\"rgb(227,27,28)\"}}}",
+  "description": "",
+  "savedSearchId": "16a72e70-4543-11e7-9510-4b0b4978ab0e",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "6dfc0e30-3958-11e7-ae19-21fb91585845",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "Firewall - Devices - Top Devices by Event Count",
+  "visState": "{\"title\":\"Firewall - Devices - Top Devices by Event Count\",\"type\":\"metrics\",\"params\":{\"id\":\"e1a58ab0-3957-11e7-ae19-21fb91585845\",\"type\":\"top_n\",\"series\":[{\"id\":\"e1a58ab1-3957-11e7-ae19-21fb91585845\",\"color\":\"rgba(174,161,255,1)\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"e1a58ab2-3957-11e7-ae19-21fb91585845\",\"type\":\"count\",\"field\":\"deviceHostName\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Top Firewall Devices\",\"terms_field\":\"deviceHostName\"}],\"time_field\":\"deviceReceiptTime\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"bar_color_rules\":[{\"id\":\"e4772140-3957-11e7-ae19-21fb91585845\"}],\"background_color\":null,\"filter\":\"categoryDeviceGroup:\\\"/Firewall\\\"\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "6fb90a30-3e6b-11e7-9d4a-89ea81333ea4",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Outcomes by User Names",
+  "visState": "{\"title\":\"Outcomes by User Names [PaloAlto]\",\"type\":\"pie\",\"params\":{\"addLegend\":true,\"addTooltip\":true,\"isDonut\":false,\"legendPosition\":\"right\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"categoryDeviceType\",\"exclude\":\"Network-based IDS/IPS\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"categoryOutcome\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"destinationUserName\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"colors\":{\"/Informational\":\"#7EB26D\",\"/Informational/Warning\":\"#EF843C\",\"/Success\":\"#64B0C8\",\"Anti-Virus\":\"#B7DBAB\",\"Host-based IDS/IPS\":\"#629E51\",\"Log Consolidator\":\"#E0F9D7\",\"Operating System\":\"#3F6833\",\"Recon\":\"#BF1B00\",\"Security Mangement\":\"#CFFAFF\"},\"legendOpen\":true}}",
+  "description": "",
+  "savedSearchId": "1d9ba830-3e47-11e7-af78-9fc514b4e118",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "7008cd50-3988-11e7-8b9d-ddc45b5f6d00",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "Bandwidth Overview",
+  "visState": "{\"title\":\"Bandwidth Overview\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"25\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytesIn\",\"customLabel\":\"Incoming\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytesOut\",\"customLabel\":\"Outgoing\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "75582a90-3987-11e7-8b9d-ddc45b5f6d00",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Outcome by Device Type",
+  "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customLabel\":\"Firewall Types\",\"field\":\"categoryDeviceType\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":10},\"schema\":\"segment\",\"type\":\"terms\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"customLabel\":\"Event Outcome\",\"field\":\"categoryOutcome\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":3},\"schema\":\"group\",\"type\":\"terms\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"rotate\":75,\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Firewall Types\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"orderBucketsBySum\":true,\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"mode\":\"stacked\",\"show\":\"true\",\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"percentage\",\"type\":\"square root\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"value\"}]},\"title\":\"Outcome by Device Type [PaloAlto]\",\"type\":\"histogram\"}",
+  "uiStateJSON": "{\"vis\":{\"colors\":{\"/Success\":\"#629E51\",\"/Failure\":\"#BF1B00\"}}}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "77cb1470-3989-11e7-8b9d-ddc45b5f6d00",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Application Protocols",
+  "visState": "{\"title\":\"Top 10 Application Protocols [PaloAlto]\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"square root\",\"orientation\":\"single\",\"minFontSize\":26,\"maxFontSize\":72,\"hideLabel\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"applicationProtocol\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "7a043760-3990-11e7-8b9d-ddc45b5f6d00",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Source Countries by Events",
+  "visState": "{\"title\":\"Top 10 Source Countries by Events [PaloAlto]\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Total Events\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"source.country_name\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Source Country\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"sourceAddress\",\"customLabel\":\"Source Addresses\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"destinationAddress\",\"customLabel\":\"Destination Addresses\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"destinationPort\",\"customLabel\":\"Destination Ports\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "7c414c90-3e66-11e7-899c-f940f646009b",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Source Countries by Event",
+  "visState": "{\"title\":\"Top 10 Source Countries by Event [PaloAlto]\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Total Events\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"source.country_name\",\"size\":35,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"sourceAddress\",\"customLabel\":\"Source Addresses\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"destinationAddress\",\"customLabel\":\"Destination Addresses\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"destinationPort\",\"customLabel\":\"Destination Ports\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+  "description": "",
+  "savedSearchId": "1d9ba830-3e47-11e7-af78-9fc514b4e118",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "7c6875e0-3e61-11e7-899c-f940f646009b",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Outcomes by Device Type",
+  "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"field\":\"categoryDeviceType\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":5},\"schema\":\"segment\",\"type\":\"terms\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"field\":\"categoryOutcome\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":5},\"schema\":\"group\",\"type\":\"terms\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":200},\"position\":\"left\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"categoryDeviceType: Descending\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":true,\"rotate\":75,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"bottom\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"value\"}]},\"title\":\"Outcomes by Device Type [PaloAlto]\",\"type\":\"histogram\"}",
+  "uiStateJSON": "{\"vis\":{\"colors\":{\"/Failure\":\"#BF1B00\"},\"legendOpen\":true}}",
+  "description": "",
+  "savedSearchId": "1d9ba830-3e47-11e7-af78-9fc514b4e118",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "801fff70-395a-11e7-ae19-21fb91585845",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Bandwidth Utilization",
+  "visState": "{\"title\":\"Bandwidth Utilization [PaloAlto]\",\"type\":\"metrics\",\"params\":{\"id\":\"e1a58ab0-3957-11e7-ae19-21fb91585845\",\"type\":\"timeseries\",\"series\":[{\"id\":\"e1a58ab1-3957-11e7-ae19-21fb91585845\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"e1a58ab2-3957-11e7-ae19-21fb91585845\",\"type\":\"sum\",\"field\":\"bytesIn\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Inbound\",\"terms_field\":\"deviceHostName\",\"terms_order_by\":\"_count\",\"override_index_pattern\":1,\"series_index_pattern\":\"paloalto-*\",\"series_time_field\":\"deviceReceiptTime\"},{\"id\":\"67c18da0-3959-11e7-ae19-21fb91585845\",\"color\":\"rgba(244,78,59,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"67c18da1-3959-11e7-ae19-21fb91585845\",\"type\":\"sum\",\"field\":\"bytesOut\"},{\"script\":\"params.outbound > 0 ? params.outbound * -1 : 0\",\"id\":\"7ec4d1b0-3959-11e7-ae19-21fb91585845\",\"type\":\"calculation\",\"variables\":[{\"id\":\"a9fb70f0-3959-11e7-ae19-21fb91585845\",\"name\":\"outbound\",\"field\":\"67c18da1-3959-11e7-ae19-21fb91585845\"}]}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Outbound\",\"override_index_pattern\":1,\"series_index_pattern\":\"paloalto-*\",\"series_time_field\":\"deviceReceiptTime\",\"steps\":0}],\"time_field\":\"deviceReceiptTime\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"bar_color_rules\":[{\"id\":\"e4772140-3957-11e7-ae19-21fb91585845\"}],\"background_color\":null,\"filter\":\"categoryDeviceGroup:\\\"/Firewall\\\" OR categoryDeviceGroup:\\\"/IDS/Network\\\" OR categoryDeviceGroup:\\\"/VPN\\\" \"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "82caeb10-4556-11e7-83ea-67cb6920446d",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Source Users",
+  "visState": "{\"title\":\"Top 10 Source Users [PaloAlto]\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":10,\"maxFontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"sourceUserName\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Source Users\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "7a2fc9c0-454d-11e7-86b6-95298e9da6dc",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "8bdaafe0-454e-11e7-86b6-95298e9da6dc",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "OS Source and Destination Overview",
+  "visState": "{\"title\":\"OS Source and Destination Overview\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"25\"},\"aggs\":[{\"id\":\"9\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"sourceHostName\",\"customLabel\":\"Source Hosts\"}},{\"id\":\"10\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"destinationHostName\",\"customLabel\":\"Destination Hosts\"}},{\"id\":\"11\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"sourceUserName\",\"customLabel\":\"Source Users\"}},{\"id\":\"12\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"destinationUserName\",\"customLabel\":\"Destination Users\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "7a2fc9c0-454d-11e7-86b6-95298e9da6dc",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "8cda1c30-752a-11e7-9445-91c40765092f",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Event Types by Size",
+  "visState": "{\"title\":\"Event Types by Size [PaloAlto]\",\"type\":\"histogram\",\"params\":{\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"},\"valueAxis\":null},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100,\"rotate\":75},\"title\":{\"text\":\"Event Type\"}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"square root\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}},{\"id\":\"ValueAxis-2\",\"name\":\"RightAxis-1\",\"type\":\"value\",\"position\":\"right\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"square root\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Total (Bytes)\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true},{\"show\":true,\"mode\":\"normal\",\"type\":\"line\",\"drawLinesBetweenPoints\":true,\"showCircles\":false,\"interpolate\":\"linear\",\"lineWidth\":3,\"data\":{\"id\":\"3\",\"label\":\"Total (Bytes)\"},\"valueAxis\":\"ValueAxis-2\"}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false,\"orderBucketsBySum\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"deviceEventClassId\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Event Type\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytesIn\",\"customLabel\":\"Total (Bytes)\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"colors\":{\"Total (Bytes)\":\"#E24D42\",\"Count\":\"#64B0C8\"}}}",
+  "description": "",
+  "savedSearchId": "bb1f4bc0-73fd-11e7-b4d0-0fc7dfb45744",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "8f0161a0-752d-11e7-b440-f1d91dc5774d",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Sources by Size",
+  "visState": "{\"title\":\"Top 10 Sources by Size [PaloAlto]\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"sourceHostName\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Sources\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytesIn\",\"customLabel\":\"Bytes\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"destinationHostName\",\"customLabel\":\"Destinations\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Count\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"P-11\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-13\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-2\":{\"mapCenter\":[-0.17578097424708533,0],\"mapZoom\":0},\"P-3\":{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}},\"P-4\":{\"mapCenter\":[-0.17578097424708533,0],\"mapZoom\":0},\"P-5\":{\"vis\":{\"defaultColors\":{\"0 - 18,000\":\"rgb(247,251,255)\",\"108,000 - 126,000\":\"rgb(74,152,201)\",\"126,000 - 144,000\":\"rgb(46,126,188)\",\"144,000 - 162,000\":\"rgb(23,100,171)\",\"162,000 - 180,000\":\"rgb(8,74,145)\",\"18,000 - 36,000\":\"rgb(227,238,249)\",\"36,000 - 54,000\":\"rgb(208,225,242)\",\"54,000 - 72,000\":\"rgb(182,212,233)\",\"72,000 - 90,000\":\"rgb(148,196,223)\",\"90,000 - 108,000\":\"rgb(107,174,214)\"},\"legendOpen\":false}},\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+  "description": "",
+  "savedSearchId": "bb1f4bc0-73fd-11e7-b4d0-0fc7dfb45744",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "8f8d6230-454f-11e7-86b6-95298e9da6dc",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Behaviors by Outcome",
+  "visState": "{\"title\":\"Top 10 Behaviors by Outcome [PaloAlto]\",\"type\":\"heatmap\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"enableHover\":true,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":10,\"colorSchema\":\"Yellow to Red\",\"setColorRange\":false,\"colorsRange\":[],\"invertColors\":false,\"percentageMode\":false,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":false,\"rotate\":0,\"color\":\"#555\"}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"categoryBehavior\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Event Type\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"categoryOutcome\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Event Outcome\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 9,000\":\"rgb(255,255,204)\",\"9,000 - 18,000\":\"rgb(255,241,170)\",\"18,000 - 27,000\":\"rgb(254,225,135)\",\"27,000 - 36,000\":\"rgb(254,201,101)\",\"36,000 - 45,000\":\"rgb(254,171,73)\",\"45,000 - 54,000\":\"rgb(253,141,60)\",\"54,000 - 63,000\":\"rgb(252,91,46)\",\"63,000 - 72,000\":\"rgb(237,47,34)\",\"72,000 - 81,000\":\"rgb(212,16,32)\",\"81,000 - 90,000\":\"rgb(176,0,38)\"}}}",
+  "description": "",
+  "savedSearchId": "7a2fc9c0-454d-11e7-86b6-95298e9da6dc",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "9141cc20-4553-11e7-83ea-67cb6920446d",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 5 Vendors by Product",
+  "visState": "{\"title\":\"Top 5 Vendors by Product [PaloAlto]\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"deviceVendor\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"OS Vendor\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"deviceProduct\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"OS Product\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "7a2fc9c0-454d-11e7-86b6-95298e9da6dc",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "93531890-4556-11e7-83ea-67cb6920446d",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Destination Users",
+  "visState": "{\"title\":\"Top 10 Destination Users [PaloAlto]\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":10,\"maxFontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"destinationUserName\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Destination Users\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "7a2fc9c0-454d-11e7-86b6-95298e9da6dc",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "96af5bf0-3e50-11e7-af78-9fc514b4e118",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Events by Device",
+  "visState": "{\"title\":\"Events by Device [PaloAlto]\",\"type\":\"metrics\",\"params\":{\"id\":\"f80221f0-3e4e-11e7-af78-9fc514b4e118\",\"type\":\"timeseries\",\"series\":[{\"id\":\"f80221f1-3e4e-11e7-af78-9fc514b4e118\",\"color\":\"rgba(254,37,37,1)\",\"split_mode\":\"filters\",\"metrics\":[{\"id\":\"f8024900-3e4e-11e7-af78-9fc514b4e118\",\"type\":\"count\"},{\"settings\":\"\",\"minimize\":0,\"window\":\"\",\"model\":\"simple\",\"id\":\"1d93e660-3e4f-11e7-af78-9fc514b4e118\",\"type\":\"moving_average\",\"field\":\"f8024900-3e4e-11e7-af78-9fc514b4e118\"}],\"seperate_axis\":1,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":\"3\",\"point_size\":1,\"fill\":\"0\",\"stacked\":\"none\",\"split_filters\":[{\"filter\":\"categoryDeviceGroup:\\\"/Operating System\\\" \",\"label\":\"Operating System\",\"color\":\"rgba(244,78,59,1)\",\"id\":\"725ac7e0-3e4f-11e7-af78-9fc514b4e118\"},{\"filter\":\" categoryDeviceGroup:\\\"/IDS/Host\\\"\",\"label\":\"Host IDS\",\"color\":\"rgba(254,146,0,1)\",\"id\":\"bd6104c0-3e4f-11e7-af78-9fc514b4e118\"},{\"filter\":\"categoryDeviceGroup:\\\"/Application\\\"\",\"label\":\"Application\",\"color\":\"rgba(252,220,0,1)\",\"id\":\"cf5dd0e0-3e4f-11e7-af78-9fc514b4e118\"}],\"label\":\"Events\"},{\"id\":\"1633f8a0-3e50-11e7-af78-9fc514b4e118\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"1633f8a1-3e50-11e7-af78-9fc514b4e118\",\"type\":\"count\"},{\"settings\":\"\",\"minimize\":0,\"window\":\"\",\"model\":\"simple\",\"id\":\"2b8a9e20-3e50-11e7-af78-9fc514b4e118\",\"type\":\"moving_average\",\"field\":\"1633f8a1-3e50-11e7-af78-9fc514b4e118\"}],\"seperate_axis\":1,\"axis_position\":\"left\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Moving Average by Device HostNames\",\"terms_field\":\"deviceHostName\"}],\"time_field\":\"deviceReceiptTime\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"filter\":\"categoryDeviceGroup:\\\"/Operating System\\\" OR categoryDeviceGroup:\\\"/IDS/Host\\\" OR categoryDeviceGroup:\\\"/Application\\\"\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "992c7bd0-3e4e-11e7-96c4-0d3a291ec93a",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 5 Sources by Destination Addresses",
+  "visState": "{\"title\":\"Top 5 Sources by Destination Addresses [PaloAlto]\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"destinationAddress\",\"customLabel\":\"Destination Addresses\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Event Count\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"sourceAddress\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"2\",\"customLabel\":\"Source Address\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "9d317890-3988-11e7-8b9d-ddc45b5f6d00",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "Overall Time Range",
+  "visState": "{\"title\":\"Overall Time Range\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"15\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"deviceReceiptTime\",\"customLabel\":\"Start Time\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"deviceReceiptTime\",\"customLabel\":\"End Time\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "9de87d40-3e4e-11e7-af78-9fc514b4e118",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Outcomes Breakdown",
+  "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customInterval\":\"2h\",\"customLabel\":\"Time\",\"extended_bounds\":{},\"field\":\"deviceReceiptTime\",\"interval\":\"auto\",\"min_doc_count\":1},\"schema\":\"segment\",\"type\":\"date_histogram\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"field\":\"categoryOutcome\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":5},\"schema\":\"group\",\"type\":\"terms\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Time\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"mode\":\"stacked\",\"show\":\"true\",\"showCircles\":true,\"type\":\"area\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"value\"}]},\"title\":\"Outcomes Breakdown [PaloAlto]\",\"type\":\"area\"}",
+  "uiStateJSON": "{\"vis\":{\"colors\":{\"/Failure\":\"#BF1B00\",\"/Attempt\":\"#3F2B5B\"},\"legendOpen\":true}}",
+  "description": "",
+  "savedSearchId": "1d9ba830-3e47-11e7-af78-9fc514b4e118",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "9e4c5ca0-76cc-11e7-9fc0-830beaf5fb4b",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Event Count",
+  "visState": "{\"title\":\"Event Count [PaloAlto]\",\"type\":\"metrics\",\"params\":{\"id\":\"19363b80-76cc-11e7-9fc0-830beaf5fb4b\",\"type\":\"metric\",\"series\":[{\"id\":\"19363b81-76cc-11e7-9fc0-830beaf5fb4b\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"19363b82-76cc-11e7-9fc0-830beaf5fb4b\",\"type\":\"count\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"0.0a\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Event Count\",\"value_template\":\"\",\"override_index_pattern\":1,\"series_index_pattern\":\"paloalto-*\",\"series_time_field\":\"@timestamp\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"background_color_rules\":[{\"id\":\"30faacb0-76cc-11e7-9fc0-830beaf5fb4b\"}]},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "a8ce0ef0-4556-11e7-83ea-67cb6920446d",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Sources",
+  "visState": "{\"title\":\"Top 10 Sources [PaloAlto]\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":10,\"maxFontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"sourceHostName\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Source Hosts\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "7a2fc9c0-454d-11e7-86b6-95298e9da6dc",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "aa2ff0a0-3e4a-11e7-96c4-0d3a291ec93a",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Unique Destinations and Ports by Source",
+  "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customLabel\":\"Destination Addresses\",\"field\":\"destinationAddress\"},\"schema\":\"metric\",\"type\":\"cardinality\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customLabel\":\"Source Addresses\",\"field\":\"sourceAddress\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":20},\"schema\":\"segment\",\"type\":\"terms\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"customLabel\":\"Destination Ports\",\"field\":\"destinationPort\"},\"schema\":\"metric\",\"type\":\"cardinality\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Source Addresses\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Destination Addresses\"},\"drawLinesBetweenPoints\":true,\"mode\":\"stacked\",\"show\":\"true\",\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"},{\"data\":{\"id\":\"3\",\"label\":\"Destination Ports\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"lineWidth\":2,\"mode\":\"stacked\",\"show\":true,\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-2\"}],\"setYExtents\":false,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Destination Addresses\"},\"type\":\"value\"},{\"id\":\"ValueAxis-2\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"RightAxis-1\",\"position\":\"right\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Destination Ports\"},\"type\":\"value\"}]},\"title\":\"Unique Destinations and Ports by Source [PaloAlto]\",\"type\":\"histogram\"}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "aa57b050-7526-11e7-b440-f1d91dc5774d",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Events Types by Severity",
+  "visState": "{\"title\":\"Events Types by Severity [PaloAlto]\",\"type\":\"metrics\",\"params\":{\"id\":\"5f4e1f70-7523-11e7-b440-f1d91dc5774d\",\"type\":\"timeseries\",\"series\":[{\"id\":\"f7c4afd0-752d-11e7-ae68-d756b92f3a9c\",\"color\":\"#68BC00\",\"split_mode\":\"filters\",\"metrics\":[{\"id\":\"f7c4afd1-752d-11e7-ae68-d756b92f3a9c\",\"type\":\"count\",\"field\":\"bytesIn\"}],\"seperate_axis\":1,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":\"3\",\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"Cumulative Bytes\",\"split_filters\":[{\"filter\":\"(deviceSeverity:\\\"2\\\" OR deviceSeverity:\\\"3\\\" OR deviceSeverity:\\\"5\\\" OR deviceSeverity:\\\"16\\\" OR deviceCustomString4:\\\"SERVFAIL\\\" OR deviceCustomString4:\\\"NXDOMAIN\\\" OR deviceCustomString4:\\\"REFUSED\\\" OR deviceCustomString4:\\\"BADVERS\\\" OR deviceCustomString4:\\\"BADSIG\\\")\",\"label\":\"HIGH\",\"color\":\"rgba(244,78,59,1)\",\"id\":\"53f76f80-7539-11e7-ae68-d756b92f3a9c\"},{\"filter\":\"(deviceSeverity:\\\"1\\\" OR  deviceSeverity:\\\"4\\\" OR  deviceSeverity:\\\"6\\\" OR  deviceSeverity:\\\"7\\\" OR  deviceSeverity:\\\"8\\\" OR  deviceSeverity:\\\"9\\\" OR  deviceSeverity:\\\"10\\\" OR deviceSeverity:\\\"17\\\" OR  deviceSeverity:\\\"18\\\" OR  deviceSeverity:\\\"19\\\" OR  deviceSeverity:\\\"20\\\" OR  deviceSeverity:\\\"21\\\" OR  deviceSeverity:\\\"22\\\" OR   deviceCustomString4:\\\"Error\\\" OR  deviceCustomString4:\\\"ERROR\\\" OR  deviceCustomString4:\\\"Warning\\\" OR  deviceCustomString4:\\\"WARNING\\\" OR  deviceCustomString4:\\\"FORMERR\\\" OR  deviceCustomString4:\\\"NOTIMP\\\" OR  deviceCustomString4:\\\"YXDOMAIN\\\" OR  deviceCustomString4:\\\"YXRRSET\\\" OR  deviceCustomString4:\\\"NXRRSET\\\" OR  deviceCustomString4:\\\"NOTAUTH\\\" OR  deviceCustomString4:\\\"NOTZONE\\\" OR  deviceCustomString4:\\\"BADKEY\\\" OR  deviceCustomString4:\\\"BADTIME\\\" OR  deviceCustomString4:\\\"BADMODE\\\" OR  deviceCustomString4:\\\"BADNAME\\\" OR  deviceCustomString4:\\\"BADALG\\\" OR  deviceCustomString4:\\\"BADTRUNC\\\")\",\"label\":\"MEDIUM\",\"color\":\"rgba(254,146,0,1)\",\"id\":\"6033e990-7539-11e7-ae68-d756b92f3a9c\"},{\"filter\":\"(NOT (deviceSeverity:\\\"2\\\" OR deviceSeverity:\\\"3\\\" OR deviceSeverity:\\\"5\\\" OR deviceSeverity:\\\"16\\\" OR deviceCustomString4:\\\"SERVFAIL\\\" OR deviceCustomString4:\\\"NXDOMAIN\\\" OR deviceCustomString4:\\\"REFUSED\\\" OR deviceCustomString4:\\\"BADVERS\\\" OR deviceCustomString4:\\\"BADSIG\\\" OR deviceSeverity:\\\"1\\\" OR  deviceSeverity:\\\"4\\\" OR  deviceSeverity:\\\"6\\\" OR  deviceSeverity:\\\"7\\\" OR  deviceSeverity:\\\"8\\\" OR  deviceSeverity:\\\"9\\\" OR  deviceSeverity:\\\"10\\\" OR deviceSeverity:\\\"17\\\" OR  deviceSeverity:\\\"18\\\" OR  deviceSeverity:\\\"19\\\" OR  deviceSeverity:\\\"20\\\" OR  deviceSeverity:\\\"21\\\" OR  deviceSeverity:\\\"22\\\" OR deviceCustomString4:\\\"Error\\\" OR  deviceCustomString4:\\\"ERROR\\\" OR  deviceCustomString4:\\\"Warning\\\" OR  deviceCustomString4:\\\"WARNING\\\" OR  deviceCustomString4:\\\"FORMERR\\\" OR  deviceCustomString4:\\\"NOTIMP\\\" OR  deviceCustomString4:\\\"YXDOMAIN\\\" OR  deviceCustomString4:\\\"YXRRSET\\\" OR  deviceCustomString4:\\\"NXRRSET\\\" OR  deviceCustomString4:\\\"NOTAUTH\\\" OR  deviceCustomString4:\\\"NOTZONE\\\" OR  deviceCustomString4:\\\"BADKEY\\\" OR  deviceCustomString4:\\\"BADTIME\\\" OR  deviceCustomString4:\\\"BADMODE\\\" OR  deviceCustomString4:\\\"BADNAME\\\" OR  deviceCustomString4:\\\"BADALG\\\" OR  deviceCustomString4:\\\"BADTRUNC\\\"))\",\"label\":\"LOW\",\"color\":\"rgba(252,220,0,1)\",\"id\":\"6b4be0d0-7539-11e7-ae68-d756b92f3a9c\"}]},{\"id\":\"e1a5d1f0-7525-11e7-b440-f1d91dc5774d\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"e1a5d1f1-7525-11e7-b440-f1d91dc5774d\",\"type\":\"count\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Count by Event Type\",\"terms_field\":\"deviceEventClassId\",\"terms_size\":\"20\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"filter\":\"deviceProduct:\\\"DNS Trace Log\\\"\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "ad802c10-3973-11e7-ae19-21fb91585845",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Devices by Bandwidth",
+  "visState": "{\"title\":\"Top 10 Devices by Bandwidth [PaloAlto]\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"deviceHostName\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Device\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"sourceAddress\",\"customLabel\":\"Source(s)\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"destinationAddress\",\"customLabel\":\"Destination(s)\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"destinationPort\",\"customLabel\":\"Destination Ports\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytesIn\",\"customLabel\":\"Bandwidth (Incoming)\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytesOut\",\"customLabel\":\"Bandwidth (Outgoing)\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "afdba840-3e55-11e7-96c4-0d3a291ec93a",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Source Addresses",
+  "visState": "{\"title\":\"Top 10 Source Addresses [PaloAlto]\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":18,\"maxFontSize\":72},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"sourceAddress\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Source Addresses\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "b1f98ce0-7745-11e7-8fb2-417804dc0ec8",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top Sources by Events",
+  "visState": "{\"title\":\"Top Sources by Events [PaloAlto]\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Shaded Circle Markers\",\"isDesaturated\":true,\"addTooltip\":true,\"heatMaxZoom\":0,\"heatMinOpacity\":0.1,\"heatRadius\":25,\"heatBlur\":15,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"url\":\"https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer\",\"options\":{\"version\":\"1.3.0\",\"layers\":\"0\",\"format\":\"image/png\",\"transparent\":true,\"attribution\":\"Maps provided by USGS\",\"styles\":\"\"}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"source.location\",\"autoPrecision\":true,\"useGeocentroid\":true,\"precision\":2}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "bb1f4bc0-73fd-11e7-b4d0-0fc7dfb45744",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "b74e59b0-3e5f-11e7-899c-f940f646009b",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Endpoint Metrics Overview",
+  "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customLabel\":\"Event Count\"},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customLabel\":\"Devices\",\"field\":\"deviceHostName\"},\"schema\":\"metric\",\"type\":\"cardinality\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"customLabel\":\"Source\",\"field\":\"sourceAddress\"},\"schema\":\"metric\",\"type\":\"cardinality\"},{\"enabled\":true,\"id\":\"4\",\"params\":{\"customLabel\":\"Destination\",\"field\":\"destinationAddress\"},\"schema\":\"metric\",\"type\":\"cardinality\"},{\"enabled\":true,\"id\":\"5\",\"params\":{\"customLabel\":\"Port\",\"field\":\"destinationPort\"},\"schema\":\"metric\",\"type\":\"cardinality\"}],\"listeners\":{},\"params\":{\"addLegend\":false,\"addTooltip\":true,\"fontSize\":\"30\",\"gauge\":{\"autoExtend\":false,\"backStyle\":\"Full\",\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":100}],\"gaugeColorMode\":\"None\",\"gaugeStyle\":\"Full\",\"gaugeType\":\"Metric\",\"invertColors\":false,\"labels\":{\"color\":\"black\",\"show\":true},\"orientation\":\"vertical\",\"percentageMode\":false,\"scale\":{\"color\":\"#333\",\"labels\":false,\"show\":false,\"width\":2},\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":\"12\",\"labelColor\":false,\"subText\":\"\"},\"type\":\"simple\",\"useRange\":false,\"verticalSplit\":false},\"handleNoResults\":true,\"type\":\"gauge\"},\"title\":\"Endpoint Metrics Overview [PaloAlto]\",\"type\":\"metric\"}",
+  "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}}",
+  "description": "",
+  "savedSearchId": "1d9ba830-3e47-11e7-af78-9fc514b4e118",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "b897ce70-4556-11e7-83ea-67cb6920446d",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Destinations",
+  "visState": "{\"title\":\"Top 10 Destinations [PaloAlto]\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":10,\"maxFontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"destinationHostName\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Destination Hosts\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "7a2fc9c0-454d-11e7-86b6-95298e9da6dc",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "bd1c82c0-75a7-11e7-871d-5f0fb978413c",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Events by Size",
+  "visState": "{\"title\":\"Events by Size [PaloAlto]\",\"type\":\"metrics\",\"params\":{\"id\":\"8d6c10a0-75a6-11e7-871d-5f0fb978413c\",\"type\":\"timeseries\",\"series\":[{\"id\":\"8d6c10a1-75a6-11e7-871d-5f0fb978413c\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"8d6c10a2-75a6-11e7-871d-5f0fb978413c\",\"type\":\"sum\",\"field\":\"bytesIn\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":\"2\",\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"filter\":\"deviceDirection:\\\"0\\\"\",\"label\":\"Inbound Bytes\"},{\"id\":\"b15b6fb0-75a6-11e7-871d-5f0fb978413c\",\"color\":\"rgba(244,78,59,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b15b6fb1-75a6-11e7-871d-5f0fb978413c\",\"type\":\"sum\",\"field\":\"bytesIn\"},{\"script\":\"params.outbound_bytes >= 0 ? params.outbound_bytes * -1 : 0\",\"id\":\"b6e2b060-75a6-11e7-871d-5f0fb978413c\",\"type\":\"calculation\",\"variables\":[{\"id\":\"b9031f60-75a6-11e7-871d-5f0fb978413c\",\"name\":\"outbound_bytes\",\"field\":\"b15b6fb1-75a6-11e7-871d-5f0fb978413c\"}]}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"bytes\",\"chart_type\":\"line\",\"line_width\":\"2\",\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"filter\":\"deviceDirection:\\\"1\\\"\",\"label\":\"Outbound Bytes\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"filter\":\"deviceProduct:\\\"DNS Trace Log\\\"\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "bfa45650-3e55-11e7-96c4-0d3a291ec93a",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Destination Addresses",
+  "visState": "{\"title\":\"Top 10 Destination Addresses [PaloAlto]\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":18,\"maxFontSize\":72},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"destinationAddress\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Destination Addresses\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "c53825b0-3e4b-11e7-af78-9fc514b4e118",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Endpoint Average EPS",
+  "visState": "{\"title\":\"Endpoint Average EPS [PaloAlto]\",\"type\":\"metrics\",\"params\":{\"id\":\"3f2cf630-3e4b-11e7-af78-9fc514b4e118\",\"type\":\"gauge\",\"series\":[{\"id\":\"3f2cf631-3e4b-11e7-af78-9fc514b4e118\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"3f2cf632-3e4b-11e7-af78-9fc514b4e118\",\"type\":\"count\"},{\"id\":\"fbe01c40-7dc4-11e7-95f6-690ab80d4e85\",\"type\":\"cumulative_sum\",\"field\":\"3f2cf632-3e4b-11e7-af78-9fc514b4e118\"},{\"unit\":\"1s\",\"id\":\"01089b20-7dc5-11e7-95f6-690ab80d4e85\",\"type\":\"derivative\",\"field\":\"fbe01c40-7dc4-11e7-95f6-690ab80d4e85\"},{\"settings\":\"\",\"minimize\":0,\"window\":\"\",\"model\":\"simple\",\"id\":\"070d9750-7dc5-11e7-95f6-690ab80d4e85\",\"type\":\"moving_average\",\"field\":\"01089b20-7dc5-11e7-95f6-690ab80d4e85\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Event Throughput\",\"value_template\":\"{{value}} / s\"}],\"time_field\":\"deviceReceiptTime\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"bar_color_rules\":[{\"id\":\"527ca820-3e4b-11e7-af78-9fc514b4e118\"}],\"gauge_color_rules\":[{\"id\":\"52cee6d0-3e4b-11e7-af78-9fc514b4e118\"}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"filter\":\"categoryDeviceGroup:\\\"/Operating System\\\" OR categoryDeviceGroup:\\\"/IDS/Host\\\" OR categoryDeviceGroup:\\\"/Application\\\"\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "c658b300-7745-11e7-8fb2-417804dc0ec8",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top Destinations by Events",
+  "visState": "{\"title\":\"Top Destinations by Events [PaloAlto]\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Shaded Circle Markers\",\"isDesaturated\":true,\"addTooltip\":true,\"heatMaxZoom\":0,\"heatMinOpacity\":0.1,\"heatRadius\":25,\"heatBlur\":15,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"url\":\"https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer\",\"options\":{\"version\":\"1.3.0\",\"layers\":\"0\",\"format\":\"image/png\",\"transparent\":true,\"attribution\":\"Maps provided by USGS\",\"styles\":\"\"}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"destination.location\",\"autoPrecision\":true,\"useGeocentroid\":true,\"precision\":2}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "bb1f4bc0-73fd-11e7-b4d0-0fc7dfb45744",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "c6db4140-4544-11e7-a94a-5d0a73686c64",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "DNS Metrics Overview",
+  "visState": "{\"title\":\"DNS Metrics Overview\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"25\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Event Count\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"deviceHostName\",\"customLabel\":\"# of DNS Devices\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"sourceAddress\",\"customLabel\":\"Source Address(es)\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"deviceCustomString3\",\"customLabel\":\"Connection IDs\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"destinationDnsDomain\",\"customLabel\":\"Domains\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"deviceCustomString1\",\"customLabel\":\"Query Type(s)\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "16a72e70-4543-11e7-9510-4b0b4978ab0e",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "c9e333a0-4550-11e7-86b6-95298e9da6dc",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Source Users by Event Type and Destination Users",
+  "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customLabel\":\"Source Users\",\"field\":\"sourceUserName\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":20},\"schema\":\"segment\",\"type\":\"terms\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"customLabel\":\"Event Types\",\"field\":\"categoryBehavior\"},\"schema\":\"metric\",\"type\":\"cardinality\"},{\"enabled\":true,\"id\":\"4\",\"params\":{\"customLabel\":\"Destination User Names\",\"field\":\"destinationUserName\"},\"schema\":\"metric\",\"type\":\"cardinality\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Source Users\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"mode\":\"stacked\",\"show\":\"true\",\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"},{\"data\":{\"id\":\"3\",\"label\":\"Event Types\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"lineWidth\":2,\"mode\":\"stacked\",\"show\":true,\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-2\"},{\"data\":{\"id\":\"4\",\"label\":\"Destination User Names\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"lineWidth\":2,\"mode\":\"stacked\",\"show\":true,\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-2\"}],\"setYExtents\":false,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"square root\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Count\"},\"type\":\"value\"},{\"id\":\"ValueAxis-2\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"RightAxis-1\",\"position\":\"right\",\"scale\":{\"mode\":\"normal\",\"type\":\"square root\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"\"},\"type\":\"value\"}]},\"title\":\"Source Users by Event Type and Destination Users [PaloAlto]\",\"type\":\"histogram\"}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "7a2fc9c0-454d-11e7-86b6-95298e9da6dc",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "cc8affd0-3e65-11e7-899c-f940f646009b",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 5 Source Countries",
+  "visState": "{\"title\":\"Top 5 Source Countries [PaloAlto]\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":18,\"maxFontSize\":72},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"source.country_name\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "1d9ba830-3e47-11e7-af78-9fc514b4e118",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "cd462cc0-3e55-11e7-96c4-0d3a291ec93a",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Destination Ports",
+  "visState": "{\"title\":\"Top 10 Destination Ports [PaloAlto]\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":18,\"maxFontSize\":72},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"destinationPort\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Destination Addresses\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "d6d526f0-395b-11e7-ae19-21fb91585845",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Events by Source",
+  "visState": "{\"title\":\"Events by Source [PaloAlto]\",\"type\":\"metrics\",\"params\":{\"axis_formatter\":\"number\",\"axis_position\":\"left\",\"background_color\":null,\"background_color_rules\":[{\"id\":\"837bfbb0-395a-11e7-ae19-21fb91585845\"}],\"bar_color_rules\":[{\"id\":\"e4772140-3957-11e7-ae19-21fb91585845\"}],\"filter\":\"categoryDeviceType:\\\"Firewall\\\" OR categoryDeviceGroup:\\\"/IDS/Network\\\" OR categoryDeviceGroup:\\\"/VPN\\\"\",\"gauge_color_rules\":[{\"id\":\"8970f250-395a-11e7-ae19-21fb91585845\"}],\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"gauge_width\":10,\"id\":\"e1a58ab0-3957-11e7-ae19-21fb91585845\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"series\":[{\"axis_position\":\"right\",\"chart_type\":\"line\",\"color\":\"rgba(244,78,59,1)\",\"fill\":\"0\",\"filter\":\"categoryDeviceGroup:\\\"/Firewall\\\"\",\"formatter\":\"number\",\"id\":\"8f58a280-395a-11e7-ae19-21fb91585845\",\"label\":\"Events\",\"line_width\":\"3\",\"metrics\":[{\"id\":\"8f58a281-395a-11e7-ae19-21fb91585845\",\"type\":\"count\"},{\"settings\":\"\",\"minimize\":0,\"window\":\"\",\"model\":\"simple\",\"field\":\"8f58a281-395a-11e7-ae19-21fb91585845\",\"id\":\"140cf490-395b-11e7-ae19-21fb91585845\",\"sigma\":\"\",\"type\":\"moving_average\"}],\"point_size\":\"0\",\"seperate_axis\":1,\"split_mode\":\"filters\",\"stacked\":\"none\",\"steps\":0,\"terms_field\":\"deviceHostName\",\"terms_order_by\":null,\"split_filters\":[{\"filter\":\"categoryDeviceGroup:\\\"/Firewall\\\"\",\"label\":\"Firewall Events\",\"color\":\"rgba(244,78,59,1)\",\"id\":\"1fd3fa30-4685-11e7-8ffc-b5cec7c0edbb\"},{\"filter\":\"categoryDeviceGroup:\\\"/IDS/Network\\\"\",\"label\":\"Intrusion Detection Events\",\"color\":\"rgba(254,146,0,1)\",\"id\":\"274111e0-4685-11e7-8ffc-b5cec7c0edbb\"},{\"filter\":\"categoryDeviceGroup:\\\"/VPN\\\"\",\"label\":\"VPN\",\"color\":\"rgba(252,220,0,1)\",\"id\":\"5682a680-468f-11e7-8116-65b4628ff93f\"}]},{\"axis_position\":\"left\",\"chart_type\":\"bar\",\"color\":\"rgba(0,156,224,1)\",\"fill\":\"0.5\",\"formatter\":\"number\",\"id\":\"3bb711b0-395b-11e7-ae19-21fb91585845\",\"label\":\"Moving Average by Device Hosts\",\"line_width\":1,\"metrics\":[{\"id\":\"3bb711b1-395b-11e7-ae19-21fb91585845\",\"type\":\"count\"},{\"settings\":\"\",\"minimize\":0,\"window\":\"\",\"model\":\"simple\",\"field\":\"3bb711b1-395b-11e7-ae19-21fb91585845\",\"id\":\"4b515cc0-395b-11e7-ae19-21fb91585845\",\"type\":\"moving_average\"}],\"point_size\":1,\"seperate_axis\":1,\"split_mode\":\"terms\",\"stacked\":\"none\",\"terms_field\":\"deviceHostName\",\"terms_size\":\"10\",\"split_color_mode\":\"gradient\"}],\"show_legend\":1,\"time_field\":\"deviceReceiptTime\",\"type\":\"timeseries\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "d72d7940-7529-11e7-9445-91c40765092f",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top Destinations by Traffic Size",
+  "visState": "{\"title\":\"Top Destinations by Traffic Size [PaloAlto]\",\"type\":\"heatmap\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"enableHover\":true,\"legendPosition\":\"top\",\"times\":[],\"colorsNumber\":10,\"colorSchema\":\"Blues\",\"setColorRange\":false,\"colorsRange\":[{\"from\":0,\"to\":null}],\"invertColors\":false,\"percentageMode\":false,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":false,\"rotate\":0,\"color\":\"#555\"}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytesIn\",\"customLabel\":\"Bytes\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"filters\",\"schema\":\"segment\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"deviceDirection:\\\"0\\\"\",\"analyze_wildcard\":true}}},\"label\":\"Inbound\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"deviceDirection:\\\"1\\\"\",\"analyze_wildcard\":true}}},\"label\":\"Outbound\"}]}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"destinationHostName\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 18k\":\"rgb(247,251,255)\",\"18k - 36k\":\"rgb(227,238,249)\",\"36k - 54k\":\"rgb(208,225,242)\",\"54k - 72k\":\"rgb(182,212,233)\",\"72k - 90k\":\"rgb(148,196,223)\",\"90k - 108k\":\"rgb(107,174,214)\",\"108k - 126k\":\"rgb(74,152,201)\",\"126k - 144k\":\"rgb(46,126,188)\",\"144k - 162k\":\"rgb(23,100,171)\",\"162k - 180k\":\"rgb(8,74,145)\"}}}",
+  "description": "",
+  "savedSearchId": "bb1f4bc0-73fd-11e7-b4d0-0fc7dfb45744",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "d8314510-454f-11e7-86b6-95298e9da6dc",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 20 Behaviors by Outcome",
+  "visState": "{\"title\":\"Top 20 Behaviors by Outcome [PaloAlto]\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"categoryBehavior\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Event Behavior\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"categoryOutcome\",\"size\":3,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Event Outcome\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "7a2fc9c0-454d-11e7-86b6-95298e9da6dc",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "ddef4fc0-3e55-11e7-96c4-0d3a291ec93a",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "Firewall - Suspicious - Top Application Protocols Word Cloud",
+  "visState": "{\"title\":\"Firewall - Suspicious - Top Application Protocols Word Cloud\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":18,\"maxFontSize\":72},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"applicationProtocol\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Destination Addresses\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "e301a830-3e4d-11e7-af78-9fc514b4e118",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Destination Ports by Outcomes",
+  "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"field\":\"destinationPort\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":20},\"schema\":\"segment\",\"type\":\"terms\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"field\":\"categoryOutcome\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":5},\"schema\":\"group\",\"type\":\"terms\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"destinationPort: Descending\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"mode\":\"stacked\",\"show\":\"true\",\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"defaultYExtents\":true,\"mode\":\"normal\",\"setYExtents\":false,\"type\":\"square root\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"value\"}]},\"title\":\"Destination Ports by Outcomes [PaloAlto]\",\"type\":\"histogram\"}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "1d9ba830-3e47-11e7-af78-9fc514b4e118",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "e3888410-3e50-11e7-96c4-0d3a291ec93a",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Events by Severity",
+  "visState": "{\"title\":\"Events by Severity [PaloAlto]\",\"type\":\"metrics\",\"params\":{\"id\":\"69a9f020-3e50-11e7-96c4-0d3a291ec93a\",\"type\":\"top_n\",\"series\":[{\"id\":\"69a9f021-3e50-11e7-96c4-0d3a291ec93a\",\"color\":\"#68BC00\",\"split_mode\":\"filters\",\"metrics\":[{\"id\":\"69a9f022-3e50-11e7-96c4-0d3a291ec93a\",\"type\":\"count\"},{\"sigma\":\"\",\"id\":\"7bb17f50-76f3-11e7-82d9-83ee5c3338ae\",\"type\":\"sum_bucket\",\"field\":\"69a9f022-3e50-11e7-96c4-0d3a291ec93a\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"0.0[0]a\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"split_filters\":[{\"filter\":\"severity:\\\"Low\\\" OR severity:\\\"0\\\"\",\"label\":\"LOW\",\"color\":\"rgba(104,204,202,1)\",\"id\":\"8819d6b0-3e50-11e7-96c4-0d3a291ec93a\"},{\"filter\":\"severity:\\\"Medium\\\"\",\"label\":\"MEDIUM\",\"color\":\"rgba(252,220,0,1)\",\"id\":\"9a4f6610-3e50-11e7-96c4-0d3a291ec93a\"},{\"filter\":\"severity:\\\"High\\\"\",\"label\":\"HIGH\",\"color\":\"rgba(254,146,0,1)\",\"id\":\"a3de4c50-3e50-11e7-96c4-0d3a291ec93a\"},{\"filter\":\"severity:\\\"Very-High\\\"\",\"label\":\"VERY HIGH\",\"color\":\"rgba(244,78,59,1)\",\"id\":\"a9926960-3e50-11e7-96c4-0d3a291ec93a\"}],\"label\":\"Event by Severities\"}],\"time_field\":\"deviceReceiptTime\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"bar_color_rules\":[{\"id\":\"6ed9c200-3e50-11e7-96c4-0d3a291ec93a\"}],\"filter\":\"categoryDeviceGroup:\\\"/Firewall\\\"\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "e7404c60-71cb-11e7-bdf5-8b8209f1c4b6",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Device Event Count",
+  "visState": "{\"title\":\"Device Event Count [PaloAlto]\",\"type\":\"metric\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"fontSize\":\"30\",\"gauge\":{\"autoExtend\":false,\"backStyle\":\"Full\",\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":100}],\"gaugeColorMode\":\"None\",\"gaugeStyle\":\"Full\",\"gaugeType\":\"Metric\",\"invertColors\":false,\"labels\":{\"color\":\"black\",\"show\":true},\"orientation\":\"vertical\",\"percentageMode\":false,\"scale\":{\"color\":\"#333\",\"labels\":false,\"show\":false,\"width\":2},\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":\"12\",\"labelColor\":false,\"subText\":\"\"},\"type\":\"simple\",\"useRange\":false,\"verticalSplit\":false},\"handleNoResults\":true,\"type\":\"gauge\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Event Count\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "e9c3ee00-3978-11e7-ae19-21fb91585845",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Destination Ports by Outcome",
+  "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customLabel\":\"Protocols\",\"field\":\"destinationPort\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":10},\"schema\":\"segment\",\"type\":\"terms\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"field\":\"categoryOutcome\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":5},\"schema\":\"group\",\"type\":\"terms\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"rotate\":75,\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Protocols\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"mode\":\"stacked\",\"show\":\"true\",\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"percentage\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Count\"},\"type\":\"value\"}]},\"title\":\"Destination Ports by Outcome [PaloAlto]\",\"type\":\"histogram\"}",
+  "uiStateJSON": "{\"vis\":{\"colors\":{\"/Success\":\"#629E51\",\"/Failure\":\"#BF1B00\"}}}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "ebfd45a0-75a4-11e7-b440-f1d91dc5774d",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Events by Direction",
+  "visState": "{\"title\":\"Events by Direction [PaloAlto]\",\"type\":\"metrics\",\"params\":{\"id\":\"12cdd300-75a2-11e7-b440-f1d91dc5774d\",\"type\":\"timeseries\",\"series\":[{\"id\":\"12cdd301-75a2-11e7-b440-f1d91dc5774d\",\"color\":\"#68BC00\",\"split_mode\":\"filters\",\"metrics\":[{\"id\":\"12cdd302-75a2-11e7-b440-f1d91dc5774d\",\"type\":\"count\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":\"0.2\",\"stacked\":\"none\",\"split_filters\":[{\"filter\":\"deviceDirection:\\\"0\\\"\",\"label\":\"Inbound Requests\",\"color\":\"rgba(0,156,224,1)\",\"id\":\"2bb9d440-75a2-11e7-b440-f1d91dc5774d\"}],\"label\":\"Inbound Requests\",\"filter\":\"device\"},{\"id\":\"bbe68d10-75a2-11e7-b440-f1d91dc5774d\",\"color\":\"#68BC00\",\"split_mode\":\"filters\",\"metrics\":[{\"id\":\"bbe68d11-75a2-11e7-b440-f1d91dc5774d\",\"type\":\"count\"},{\"script\":\"params.outbound > 0 ? params.outbound * -1 : 0\",\"id\":\"d50e5ed0-75a2-11e7-b440-f1d91dc5774d\",\"type\":\"calculation\",\"variables\":[{\"id\":\"d785ee80-75a2-11e7-b440-f1d91dc5774d\",\"name\":\"outbound\",\"field\":\"bbe68d11-75a2-11e7-b440-f1d91dc5774d\"}]}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":\"0.2\",\"stacked\":\"none\",\"split_filters\":[{\"filter\":\"deviceDirection:\\\"1\\\"\",\"label\":\"Outbound Requests\",\"color\":\"rgba(211,49,21,1)\",\"id\":\"bfad3200-75a2-11e7-b440-f1d91dc5774d\"}],\"label\":\"Outbound Requests\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"filter\":\"deviceProduct:\\\"DNS Trace Log\\\"\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "ec576ff0-4546-11e7-a94a-5d0a73686c64",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "Events over Time by Query Type",
+  "visState": "{\"title\":\"Events over Time by Query Type\",\"type\":\"metrics\",\"params\":{\"id\":\"45479ab0-4545-11e7-a94a-5d0a73686c64\",\"type\":\"timeseries\",\"series\":[{\"id\":\"45479ab1-4545-11e7-a94a-5d0a73686c64\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"45479ab2-4545-11e7-a94a-5d0a73686c64\",\"type\":\"count\"}],\"seperate_axis\":1,\"axis_position\":\"left\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":\"0.3\",\"stacked\":\"none\",\"label\":\"Event Count\"},{\"id\":\"afc2ab00-4545-11e7-a94a-5d0a73686c64\",\"color\":\"rgba(22,165,165,1)\",\"split_mode\":\"terms\",\"metrics\":[{\"id\":\"afc2ab01-4545-11e7-a94a-5d0a73686c64\",\"type\":\"count\"}],\"seperate_axis\":1,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":\"2\",\"point_size\":1,\"fill\":\"0\",\"stacked\":\"none\",\"label\":\"Query Types\",\"terms_field\":\"deviceCustomString1\"}],\"time_field\":\"deviceReceiptTime\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"filter\":\"deviceEventCategory:\\\"dns\\\"\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "ec926660-396f-11e7-ae19-21fb91585845",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Devices by Outcome",
+  "visState": "{\"title\":\"Top 10 Devices by Outcome [PaloAlto]\",\"type\":\"heatmap\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"enableHover\":true,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":6,\"colorSchema\":\"Yellow to Red\",\"setColorRange\":false,\"colorsRange\":[],\"invertColors\":false,\"percentageMode\":true,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":false,\"rotate\":0,\"color\":\"#555\"}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"deviceHostName\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Device Host Names\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"categoryOutcome\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Event Outcome\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0% - 17%\":\"rgb(255,255,204)\",\"17% - 34%\":\"rgb(255,230,146)\",\"34% - 50%\":\"rgb(254,191,90)\",\"50% - 67%\":\"rgb(253,141,60)\",\"67% - 84%\":\"rgb(244,61,37)\",\"84% - 100%\":\"rgb(202,8,35)\"}}}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "ed2f5570-3d5b-11e7-8b9d-ddc45b5f6d00",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Network - Event Throughput",
+  "visState": "{\"title\":\"Network - Event Throughput [PaloAlto]\",\"type\":\"metrics\",\"params\":{\"id\":\"429af7e0-3d5b-11e7-8b9d-ddc45b5f6d00\",\"type\":\"gauge\",\"series\":[{\"id\":\"429af7e1-3d5b-11e7-8b9d-ddc45b5f6d00\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"429af7e2-3d5b-11e7-8b9d-ddc45b5f6d00\",\"type\":\"count\"},{\"id\":\"0bd1cb90-7dc4-11e7-95f6-690ab80d4e85\",\"type\":\"cumulative_sum\",\"field\":\"429af7e2-3d5b-11e7-8b9d-ddc45b5f6d00\"},{\"unit\":\"1s\",\"id\":\"103c9fc0-7dc4-11e7-95f6-690ab80d4e85\",\"type\":\"derivative\",\"field\":\"0bd1cb90-7dc4-11e7-95f6-690ab80d4e85\"},{\"settings\":\"\",\"minimize\":0,\"window\":\"\",\"model\":\"simple\",\"id\":\"4f004810-7dc4-11e7-95f6-690ab80d4e85\",\"type\":\"moving_average\",\"field\":\"103c9fc0-7dc4-11e7-95f6-690ab80d4e85\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Event Throughput\",\"value_template\":\"{{value}}  / s\"}],\"time_field\":\"deviceReceiptTime\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"filter\":\"categoryDeviceType:\\\"Firewall\\\" OR categoryDeviceGroup:\\\"/IDS/Network\\\" OR categoryDeviceGroup:\\\"/VPN\\\" \",\"bar_color_rules\":[{\"id\":\"77dd4e80-3d5b-11e7-8b9d-ddc45b5f6d00\"}],\"background_color_rules\":[{\"id\":\"798c5e10-3d5b-11e7-8b9d-ddc45b5f6d00\"}],\"gauge_color_rules\":[{\"value\":0,\"id\":\"988f35d0-3d5b-11e7-8b9d-ddc45b5f6d00\",\"gauge\":null}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"gauge_max\":\"\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "f0664070-4551-11e7-86b6-95298e9da6dc",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Events by Outcomes",
+  "visState": "{\"title\":\"Events by Outcomes [PaloAlto]\",\"type\":\"metrics\",\"params\":{\"id\":\"e10aefa0-4550-11e7-86b6-95298e9da6dc\",\"type\":\"timeseries\",\"series\":[{\"id\":\"1b5b1130-4551-11e7-86b6-95298e9da6dc\",\"color\":\"rgba(244,78,59,1)\",\"split_mode\":\"filters\",\"metrics\":[{\"id\":\"1b5b1131-4551-11e7-86b6-95298e9da6dc\",\"type\":\"count\"}],\"seperate_axis\":1,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":\"3\",\"point_size\":1,\"fill\":\"0\",\"stacked\":\"none\",\"terms_field\":\"categoryOutcome\",\"terms_size\":\"3\",\"label\":\"Event Outcomes\",\"hide_in_legend\":0,\"split_filters\":[{\"filter\":\"categoryOutcome:\\\"/Failure\\\"\",\"label\":\"Failure\",\"color\":\"rgba(244,78,59,1)\",\"id\":\"a4c1a0b0-4551-11e7-86b6-95298e9da6dc\"},{\"filter\":\"categoryOutcome:\\\"/Success\\\"\",\"label\":\"Success\",\"color\":\"rgba(104,188,0,1)\",\"id\":\"b51f14b0-4551-11e7-86b6-95298e9da6dc\"},{\"filter\":\"categoryOutcome:\\\"/Attempt\\\"\",\"label\":\"Attempt\",\"color\":\"rgba(251,158,0,1)\",\"id\":\"c4b19790-4551-11e7-86b6-95298e9da6dc\"}]},{\"id\":\"e10aefa1-4550-11e7-86b6-95298e9da6dc\",\"color\":\"rgba(104,182,204,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"e10aefa2-4550-11e7-86b6-95298e9da6dc\",\"type\":\"count\"}],\"seperate_axis\":1,\"axis_position\":\"left\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Event Count\"}],\"time_field\":\"deviceReceiptTime\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"filter\":\"categoryDeviceGroup:\\\"/Operating System\\\"\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "f23438c0-4548-11e7-a94a-5d0a73686c64",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "DNS - Moving Average Event Count",
+  "visState": "{\"title\":\"DNS - Moving Average Event Count\",\"type\":\"metrics\",\"params\":{\"id\":\"429af7e0-3d5b-11e7-8b9d-ddc45b5f6d00\",\"type\":\"gauge\",\"series\":[{\"id\":\"429af7e1-3d5b-11e7-8b9d-ddc45b5f6d00\",\"color\":\"rgba(0,156,224,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"429af7e2-3d5b-11e7-8b9d-ddc45b5f6d00\",\"type\":\"count\"},{\"settings\":\"\",\"minimize\":0,\"window\":\"\",\"model\":\"simple\",\"id\":\"5faf9430-3d5b-11e7-8b9d-ddc45b5f6d00\",\"type\":\"moving_average\",\"field\":\"429af7e2-3d5b-11e7-8b9d-ddc45b5f6d00\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"Last Event Avg\",\"value_template\":\"{{value}}/s\"}],\"time_field\":\"deviceReceiptTime\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"filter\":\"deviceEventCategory:\\\"dns\\\"\",\"bar_color_rules\":[{\"id\":\"77dd4e80-3d5b-11e7-8b9d-ddc45b5f6d00\"}],\"background_color_rules\":[{\"id\":\"798c5e10-3d5b-11e7-8b9d-ddc45b5f6d00\"}],\"gauge_color_rules\":[{\"value\":0,\"id\":\"988f35d0-3d5b-11e7-8b9d-ddc45b5f6d00\",\"gauge\":null}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"gauge_max\":\"\",\"ignore_global_filter\":1},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "f57ea930-395d-11e7-ae19-21fb91585845",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Events by Outcome",
+  "visState": "{\"title\":\"Events by Outcome [PaloAlto]\",\"type\":\"metrics\",\"params\":{\"id\":\"e1a58ab0-3957-11e7-ae19-21fb91585845\",\"type\":\"timeseries\",\"series\":[{\"id\":\"8f58a280-395a-11e7-ae19-21fb91585845\",\"color\":\"rgba(211,49,21,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"8f58a281-395a-11e7-ae19-21fb91585845\",\"type\":\"count\"},{\"settings\":\"\",\"minimize\":0,\"window\":\"\",\"model\":\"simple\",\"id\":\"4ec00ae0-4686-11e7-8ffc-b5cec7c0edbb\",\"type\":\"moving_average\",\"field\":\"8f58a281-395a-11e7-ae19-21fb91585845\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":\"3\",\"point_size\":\"0\",\"fill\":\"0\",\"stacked\":\"none\",\"filter\":\"(categoryDeviceGroup:\\\"/Firewall\\\" OR categoryDeviceGroup:\\\"/IDS/Network\\\" OR categoryDeviceGroup:\\\"/VPN\\\") AND _exists_:categoryOutcome\",\"terms_field\":\"deviceHostName\",\"terms_order_by\":null,\"label\":\"Events\",\"steps\":0,\"split_filters\":[{\"filter\":\"categoryDeviceGroup:\\\"/Firewall\\\"\",\"label\":\"Firewall\",\"color\":\"rgba(254,146,0,1)\",\"id\":\"ccf3be70-395c-11e7-ae19-21fb91585845\"}]},{\"id\":\"3bb711b0-395b-11e7-ae19-21fb91585845\",\"color\":\"rgba(104,188,0,1)\",\"split_mode\":\"filters\",\"metrics\":[{\"id\":\"3bb711b1-395b-11e7-ae19-21fb91585845\",\"type\":\"count\"}],\"seperate_axis\":0,\"axis_position\":\"left\",\"formatter\":\"number\",\"chart_type\":\"bar\",\"line_width\":1,\"point_size\":1,\"fill\":\"1\",\"stacked\":\"stacked\",\"terms_field\":\"categoryOutcome\",\"terms_size\":\"3\",\"label\":\"Moving Average by Event Outcome\",\"split_filters\":[{\"filter\":\"categoryOutcome:\\\"/Success\\\"\",\"label\":\"Success\",\"color\":\"rgba(104,188,0,0.35)\",\"id\":\"c3189780-395d-11e7-ae19-21fb91585845\"},{\"filter\":\"categoryOutcome:\\\"/Failure\\\"\",\"label\":\"Failure\",\"color\":\"rgba(244,78,59,1)\",\"id\":\"d37d3770-395d-11e7-ae19-21fb91585845\"},{\"filter\":\"categoryOutcome:\\\"/Attempt\\\"\",\"label\":\"Attempt\",\"color\":\"rgba(0,156,224,1)\",\"id\":\"e59c7440-4685-11e7-8ffc-b5cec7c0edbb\"}]}],\"time_field\":\"deviceReceiptTime\",\"index_pattern\":\"paloalto-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"bar_color_rules\":[{\"value\":0,\"id\":\"e4772140-3957-11e7-ae19-21fb91585845\",\"bar_color\":null}],\"background_color\":null,\"filter\":\"categoryDeviceType:\\\"Firewall\\\" OR categoryDeviceGroup:\\\"/IDS/Network\\\" OR categoryDeviceGroup:\\\"/VPN\\\"\",\"background_color_rules\":[{\"id\":\"837bfbb0-395a-11e7-ae19-21fb91585845\"}],\"gauge_color_rules\":[{\"id\":\"8970f250-395a-11e7-ae19-21fb91585845\"}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"drilldown_url\":\"\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "f99c22e0-3e4e-11e7-96c4-0d3a291ec93a",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 5 Sources by Destination Ports",
+  "visState": "{\"title\":\"Top 5 Sources by Destination Ports [PaloAlto]\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"destinationPort\",\"customLabel\":\"Destination Ports\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Event Count\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"sourceAddress\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"2\",\"customLabel\":\"Source Address\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "fd70bca0-398f-11e7-8b9d-ddc45b5f6d00",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 20 Source Countries",
+  "visState": "{\"title\":\"Top 20 Source Countries [PaloAlto]\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"square root\",\"orientation\":\"single\",\"minFontSize\":26,\"maxFontSize\":72,\"hideLabel\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"source.country_name\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "6315e7a0-34be-11e7-95dc-4f6090d732f6",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "ff476320-3e4a-11e7-af78-9fc514b4e118",
+  "type": "visualization",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Top 10 Destination Port",
+  "visState": "{\"title\":\"Top 10 Destination Port [PaloAlto]\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":18,\"maxFontSize\":72},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"destinationPort\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "1d9ba830-3e47-11e7-af78-9fc514b4e118",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}
+},
+{
+  "id": "153e0bf0-752f-11e7-ae68-d756b92f3a9c",
+  "type": "dashboard",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Microsoft DNS Overview",
+  "hits": 0,
+  "description": "",
+  "panelsJSON": "[{\"col\":11,\"id\":\"4ee62420-7523-11e7-871d-5f0fb978413c\",\"panelIndex\":1,\"row\":2,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"1de45d60-7523-11e7-9445-91c40765092f\",\"panelIndex\":3,\"row\":2,\"size_x\":10,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"d72d7940-7529-11e7-9445-91c40765092f\",\"panelIndex\":5,\"row\":9,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"1c54cda0-752c-11e7-9445-91c40765092f\",\"panelIndex\":6,\"row\":13,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"8cda1c30-752a-11e7-9445-91c40765092f\",\"panelIndex\":7,\"row\":9,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"aa57b050-7526-11e7-b440-f1d91dc5774d\",\"panelIndex\":9,\"row\":4,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"4303de60-752b-11e7-9445-91c40765092f\",\"panelIndex\":11,\"row\":15,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"31b85570-454a-11e7-86b6-95298e9da6dc\",\"panelIndex\":12,\"row\":1,\"size_x\":12,\"size_y\":1,\"type\":\"visualization\"},{\"col\":1,\"id\":\"8f0161a0-752d-11e7-b440-f1d91dc5774d\",\"panelIndex\":13,\"row\":15,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"ebfd45a0-75a4-11e7-b440-f1d91dc5774d\",\"panelIndex\":14,\"row\":6,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"bd1c82c0-75a7-11e7-871d-5f0fb978413c\",\"panelIndex\":15,\"row\":6,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"size_x\":6,\"size_y\":3,\"panelIndex\":16,\"type\":\"visualization\",\"id\":\"c658b300-7745-11e7-8fb2-417804dc0ec8\",\"col\":7,\"row\":19},{\"size_x\":6,\"size_y\":3,\"panelIndex\":17,\"type\":\"visualization\",\"id\":\"b1f98ce0-7745-11e7-8fb2-417804dc0ec8\",\"col\":1,\"row\":19}]",
+  "optionsJSON": "{\"darkTheme\":false}",
+  "uiStateJSON": "{\"P-11\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-13\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-3\":{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}},\"P-5\":{\"vis\":{\"defaultColors\":{\"0 - 18k\":\"rgb(247,251,255)\",\"18k - 36k\":\"rgb(227,238,249)\",\"36k - 54k\":\"rgb(208,225,242)\",\"54k - 72k\":\"rgb(182,212,233)\",\"72k - 90k\":\"rgb(148,196,223)\",\"90k - 108k\":\"rgb(107,174,214)\",\"108k - 126k\":\"rgb(74,152,201)\",\"126k - 144k\":\"rgb(46,126,188)\",\"144k - 162k\":\"rgb(23,100,171)\",\"162k - 180k\":\"rgb(8,74,145)\"},\"legendOpen\":false}},\"P-16\":{\"mapZoom\":1,\"mapCenter\":[12.211180191503997,0]},\"P-17\":{\"mapZoom\":1,\"mapCenter\":[-0.17578097424708533,0]}}",
+  "version": 1,
+  "timeRestore": true,
+  "timeTo": "now",
+  "timeFrom": "now-24h",
+  "refreshInterval": {
+    "display": "Off",
+    "pause": false,
+    "value": 0
+  },
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}],\"highlightAll\":true,\"version\":true}"
+  }
+}
+},
+{
+  "id": "37af0b40-398d-11e7-ae19-21fb91585845",
+  "type": "dashboard",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Network Overview Dashboard",
+  "hits": 0,
+  "description": "",
+  "panelsJSON": "[{\"col\":1,\"id\":\"77cb1470-3989-11e7-8b9d-ddc45b5f6d00\",\"panelIndex\":1,\"row\":12,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"801fff70-395a-11e7-ae19-21fb91585845\",\"panelIndex\":2,\"row\":18,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"d6d526f0-395b-11e7-ae19-21fb91585845\",\"panelIndex\":5,\"row\":4,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"f57ea930-395d-11e7-ae19-21fb91585845\",\"panelIndex\":6,\"row\":16,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"161e27e0-3988-11e7-8b9d-ddc45b5f6d00\",\"panelIndex\":7,\"row\":2,\"size_x\":10,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"75582a90-3987-11e7-8b9d-ddc45b5f6d00\",\"panelIndex\":9,\"row\":6,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":5,\"id\":\"e9c3ee00-3978-11e7-ae19-21fb91585845\",\"panelIndex\":11,\"row\":6,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"ad802c10-3973-11e7-ae19-21fb91585845\",\"panelIndex\":13,\"row\":9,\"size_x\":8,\"size_y\":3,\"type\":\"visualization\"},{\"col\":9,\"id\":\"ec926660-396f-11e7-ae19-21fb91585845\",\"panelIndex\":15,\"row\":9,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":9,\"id\":\"154ff7e0-3987-11e7-8b9d-ddc45b5f6d00\",\"panelIndex\":16,\"row\":6,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"5acb74d0-398b-11e7-ae19-21fb91585845\",\"panelIndex\":17,\"row\":14,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"7a043760-3990-11e7-8b9d-ddc45b5f6d00\",\"panelIndex\":18,\"row\":20,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"fd70bca0-398f-11e7-8b9d-ddc45b5f6d00\",\"panelIndex\":19,\"row\":20,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":11,\"id\":\"ed2f5570-3d5b-11e7-8b9d-ddc45b5f6d00\",\"panelIndex\":20,\"row\":2,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"31b85570-454a-11e7-86b6-95298e9da6dc\",\"panelIndex\":21,\"row\":1,\"size_x\":12,\"size_y\":1,\"type\":\"visualization\"},{\"size_x\":6,\"size_y\":6,\"panelIndex\":24,\"type\":\"visualization\",\"id\":\"45387480-3989-11e7-8b9d-ddc45b5f6d00\",\"col\":1,\"row\":24},{\"size_x\":6,\"size_y\":6,\"panelIndex\":25,\"type\":\"visualization\",\"id\":\"35ce1310-3989-11e7-8b9d-ddc45b5f6d00\",\"col\":7,\"row\":24}]",
+  "optionsJSON": "{\"darkTheme\":false}",
+  "uiStateJSON": "{\"P-11\":{\"vis\":{\"colors\":{\"/Attempt\":\"#0A50A1\",\"/Failure\":\"#BF1B00\",\"/Success\":\"#629E51\"}}},\"P-13\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-15\":{\"vis\":{\"defaultColors\":{\"0% - 17%\":\"rgb(255,255,204)\",\"17% - 34%\":\"rgb(255,230,146)\",\"34% - 50%\":\"rgb(254,191,90)\",\"50% - 67%\":\"rgb(253,141,60)\",\"67% - 84%\":\"rgb(244,61,37)\",\"84% - 100%\":\"rgb(202,8,35)\"},\"legendOpen\":false}},\"P-16\":{\"vis\":{\"colors\":{\"Anti-Virus\":\"#EF843C\",\"Content Security\":\"#7EB26D\",\"Firewall\":\"#E24D42\",\"Integrated Security\":\"#962D82\",\"Network-based IDS/IPS\":\"#1F78C1\",\"Operating System\":\"#1F78C1\",\"VPN\":\"#EAB839\"}}},\"P-18\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-7\":{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"},\"legendOpen\":false}},\"P-8\":{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}},\"P-9\":{\"vis\":{\"colors\":{\"/Attempt\":\"#0A50A1\",\"/Failure\":\"#BF1B00\",\"/Success\":\"#629E51\"}}},\"P-25\":{\"mapZoom\":1,\"mapCenter\":[-0.3515602939922709,0]},\"P-24\":{\"mapZoom\":1,\"mapCenter\":[-0.3515602939922709,0]}}",
+  "version": 1,
+  "timeRestore": true,
+  "timeTo": "now",
+  "timeFrom": "now-24h",
+  "refreshInterval": {
+    "display": "Off",
+    "pause": false,
+    "value": 0
+  },
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}],\"highlightAll\":true,\"version\":true}"
+  }
+}
+},
+{
+  "id": "64c92510-4555-11e7-83ea-67cb6920446d",
+  "type": "dashboard",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Endpoint OS Activity Dashboard",
+  "hits": 0,
+  "description": "",
+  "panelsJSON": "[{\"col\":1,\"id\":\"c9e333a0-4550-11e7-86b6-95298e9da6dc\",\"panelIndex\":3,\"row\":8,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"463fc740-454e-11e7-86b6-95298e9da6dc\",\"panelIndex\":4,\"row\":2,\"size_x\":10,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"8f8d6230-454f-11e7-86b6-95298e9da6dc\",\"panelIndex\":5,\"row\":8,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"f0664070-4551-11e7-86b6-95298e9da6dc\",\"panelIndex\":7,\"row\":6,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"d8314510-454f-11e7-86b6-95298e9da6dc\",\"panelIndex\":8,\"row\":14,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"2b369910-4553-11e7-83ea-67cb6920446d\",\"panelIndex\":9,\"row\":11,\"size_x\":6,\"size_y\":6,\"type\":\"visualization\"},{\"col\":7,\"id\":\"9141cc20-4553-11e7-83ea-67cb6920446d\",\"panelIndex\":10,\"row\":11,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"31b85570-454a-11e7-86b6-95298e9da6dc\",\"panelIndex\":11,\"row\":1,\"size_x\":12,\"size_y\":1,\"type\":\"visualization\"},{\"col\":11,\"id\":\"0e4558b0-4552-11e7-86b6-95298e9da6dc\",\"panelIndex\":12,\"row\":2,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"47c2a140-454f-11e7-86b6-95298e9da6dc\",\"panelIndex\":13,\"row\":4,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":9,\"id\":\"68180c80-4556-11e7-83ea-67cb6920446d\",\"panelIndex\":14,\"row\":17,\"size_x\":4,\"size_y\":5,\"type\":\"visualization\"},{\"col\":9,\"id\":\"08ee04d0-4556-11e7-83ea-67cb6920446d\",\"panelIndex\":15,\"row\":22,\"size_x\":4,\"size_y\":6,\"type\":\"visualization\"},{\"col\":1,\"id\":\"b897ce70-4556-11e7-83ea-67cb6920446d\",\"panelIndex\":16,\"row\":21,\"size_x\":8,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"93531890-4556-11e7-83ea-67cb6920446d\",\"panelIndex\":17,\"row\":26,\"size_x\":8,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"a8ce0ef0-4556-11e7-83ea-67cb6920446d\",\"panelIndex\":18,\"row\":17,\"size_x\":8,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"82caeb10-4556-11e7-83ea-67cb6920446d\",\"panelIndex\":19,\"row\":24,\"size_x\":8,\"size_y\":2,\"type\":\"visualization\"}]",
+  "optionsJSON": "{\"darkTheme\":false}",
+  "uiStateJSON": "{\"P-13\":{\"vis\":{\"colors\":{\"Destination Users\":\"#E24D42\",\"Event Count\":\"#64B0C8\"}}},\"P-14\":{\"vis\":{\"legendOpen\":false}},\"P-15\":{\"vis\":{\"legendOpen\":false}},\"P-2\":{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}},\"P-3\":{\"vis\":{\"colors\":{\"Count\":\"#64B0C8\",\"Destination User Names\":\"#E24D42\",\"Event Types\":\"#EF843C\"},\"legendOpen\":true}},\"P-4\":{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}},\"P-5\":{\"vis\":{\"defaultColors\":{\"0 - 55k\":\"rgb(255,255,204)\",\"55k - 110k\":\"rgb(255,241,170)\",\"110k - 165k\":\"rgb(254,225,135)\",\"165k - 220k\":\"rgb(254,201,101)\",\"220k - 275k\":\"rgb(254,171,73)\",\"275k - 330k\":\"rgb(253,141,60)\",\"330k - 385k\":\"rgb(252,91,46)\",\"385k - 440k\":\"rgb(237,47,34)\",\"440k - 495k\":\"rgb(212,16,32)\",\"495k - 550k\":\"rgb(176,0,38)\"},\"legendOpen\":false}},\"P-8\":{\"vis\":{\"colors\":{\"/Attempt\":\"#447EBC\",\"/Failure\":\"#E24D42\",\"/Success\":\"#7EB26D\"}}},\"P-9\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",
+  "version": 1,
+  "timeRestore": true,
+  "timeTo": "now",
+  "timeFrom": "now-24h",
+  "refreshInterval": {
+    "display": "Off",
+    "pause": false,
+    "value": 0
+  },
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}],\"highlightAll\":true,\"version\":true}"
+  }
+}
+},
+{
+  "id": "82051450-3e56-11e7-96c4-0d3a291ec93a",
+  "type": "dashboard",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Network Suspicious Activity Dashboard",
+  "hits": 0,
+  "description": "",
+  "panelsJSON": "[{\"col\":1,\"id\":\"aa2ff0a0-3e4a-11e7-96c4-0d3a291ec93a\",\"panelIndex\":1,\"row\":8,\"size_x\":8,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"992c7bd0-3e4e-11e7-96c4-0d3a291ec93a\",\"panelIndex\":2,\"row\":11,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":5,\"id\":\"f99c22e0-3e4e-11e7-96c4-0d3a291ec93a\",\"panelIndex\":3,\"row\":11,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"e3888410-3e50-11e7-96c4-0d3a291ec93a\",\"panelIndex\":5,\"row\":6,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":9,\"id\":\"75582a90-3987-11e7-8b9d-ddc45b5f6d00\",\"panelIndex\":9,\"row\":8,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"0bdbb5a0-3e55-11e7-96c4-0d3a291ec93a\",\"panelIndex\":11,\"row\":4,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"afdba840-3e55-11e7-96c4-0d3a291ec93a\",\"panelIndex\":12,\"row\":14,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"bfa45650-3e55-11e7-96c4-0d3a291ec93a\",\"panelIndex\":13,\"row\":14,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":9,\"id\":\"cd462cc0-3e55-11e7-96c4-0d3a291ec93a\",\"panelIndex\":14,\"row\":11,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"31b85570-454a-11e7-86b6-95298e9da6dc\",\"panelIndex\":15,\"row\":1,\"size_x\":12,\"size_y\":1,\"type\":\"visualization\"},{\"col\":1,\"id\":\"161e27e0-3988-11e7-8b9d-ddc45b5f6d00\",\"panelIndex\":16,\"row\":2,\"size_x\":10,\"size_y\":2,\"type\":\"visualization\"},{\"col\":11,\"id\":\"ed2f5570-3d5b-11e7-8b9d-ddc45b5f6d00\",\"panelIndex\":17,\"row\":2,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"}]",
+  "optionsJSON": "{\"darkTheme\":false}",
+  "uiStateJSON": "{\"P-1\":{\"vis\":{\"colors\":{\"Destination Addresses\":\"#E0752D\",\"Destination Ports\":\"#E24D42\"},\"legendOpen\":false}},\"P-16\":{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}},\"P-17\":{\"vis\":{\"defaultColors\":{\"0 - 50\":\"rgb(255,255,204)\",\"100 - 200\":\"rgb(253,141,60)\",\"200 - 300\":\"rgb(227,27,28)\",\"300 - 400\":\"rgb(128,0,38)\",\"50 - 100\":\"rgb(254,217,118)\"}}},\"P-2\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-3\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-8\":{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}},\"P-9\":{\"vis\":{\"colors\":{\"/Attempt\":\"#0A50A1\",\"/Failure\":\"#BF1B00\",\"/Success\":\"#629E51\"}}}}",
+  "version": 1,
+  "timeRestore": true,
+  "timeTo": "now",
+  "timeFrom": "now-24h",
+  "refreshInterval": {
+    "display": "Off",
+    "pause": false,
+    "value": 0
+  },
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}],\"highlightAll\":true,\"version\":true}"
+  }
+}
+},
+{
+  "id": "d2fa5030-3e5d-11e7-b212-897f1496dc0e",
+  "type": "dashboard",
+  "version": 1,
+  "attributes": {
+  "title": "PaloAlto: Endpoint Overview Dashboard",
+  "hits": 0,
+  "description": "",
+  "panelsJSON": "[{\"col\":11,\"id\":\"c53825b0-3e4b-11e7-af78-9fc514b4e118\",\"panelIndex\":1,\"row\":2,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"e301a830-3e4d-11e7-af78-9fc514b4e118\",\"panelIndex\":2,\"row\":9,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"9de87d40-3e4e-11e7-af78-9fc514b4e118\",\"panelIndex\":3,\"row\":9,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"96af5bf0-3e50-11e7-af78-9fc514b4e118\",\"panelIndex\":5,\"row\":4,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"ff476320-3e4a-11e7-af78-9fc514b4e118\",\"panelIndex\":6,\"row\":12,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"b74e59b0-3e5f-11e7-899c-f940f646009b\",\"panelIndex\":7,\"row\":2,\"size_x\":10,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"7c6875e0-3e61-11e7-899c-f940f646009b\",\"panelIndex\":8,\"row\":12,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"columns\":[\"categoryDeviceGroup\",\"categoryTechnique\",\"categoryOutcome\",\"categorySignificance\",\"categoryObject\",\"categoryBehavior\",\"categoryDeviceType\"],\"id\":\"1d9ba830-3e47-11e7-af78-9fc514b4e118\",\"panelIndex\":9,\"row\":20,\"size_x\":12,\"size_y\":5,\"sort\":[\"deviceReceiptTime\",\"desc\"],\"type\":\"search\"},{\"col\":7,\"id\":\"cc8affd0-3e65-11e7-899c-f940f646009b\",\"panelIndex\":10,\"row\":15,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"1bde8be0-3e68-11e7-899c-f940f646009b\",\"panelIndex\":11,\"row\":6,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"7c414c90-3e66-11e7-899c-f940f646009b\",\"panelIndex\":12,\"row\":15,\"size_x\":6,\"size_y\":5,\"type\":\"visualization\"},{\"col\":7,\"id\":\"6fb90a30-3e6b-11e7-9d4a-89ea81333ea4\",\"panelIndex\":14,\"row\":6,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"31b85570-454a-11e7-86b6-95298e9da6dc\",\"panelIndex\":15,\"row\":1,\"size_x\":12,\"size_y\":1,\"type\":\"visualization\"},{\"size_x\":6,\"size_y\":3,\"panelIndex\":17,\"type\":\"visualization\",\"id\":\"2a33c810-3e4d-11e7-af78-9fc514b4e118\",\"col\":7,\"row\":17}]",
+  "optionsJSON": "{\"darkTheme\":false}",
+  "uiStateJSON": "{\"P-11\":{\"vis\":{\"colors\":{\"Anti-Virus\":\"#EAB839\",\"Database\":\"#629E51\",\"Host-based IDS/IPS\":\"#E0752D\",\"Operating System\":\"#BF1B00\",\"Security Mangement\":\"#64B0C8\"}}},\"P-12\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-14\":{\"vis\":{\"colors\":{\"/Attempt\":\"#0A50A1\",\"/Failure\":\"#BF1B00\",\"/Informational\":\"#7EB26D\",\"/Informational/Warning\":\"#EF843C\",\"/Success\":\"#629E51\",\"Anti-Virus\":\"#EAB839\",\"Database\":\"#629E51\",\"Host-based IDS/IPS\":\"#E0752D\",\"Log Consolidator\":\"#E0F9D7\",\"Operating System\":\"#BF1B00\",\"Recon\":\"#BF1B00\",\"Security Mangement\":\"#64B0C8\"}}},\"P-2\":{\"vis\":{\"colors\":{\"/Attempt\":\"#0A50A1\",\"/Failure\":\"#BF1B00\",\"/Success\":\"#629E51\"}}},\"P-3\":{\"vis\":{\"colors\":{\"/Attempt\":\"#0A50A1\",\"/Failure\":\"#BF1B00\",\"/Success\":\"#629E51\"}}},\"P-7\":{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}},\"P-8\":{\"vis\":{\"colors\":{\"/Attempt\":\"#0A50A1\",\"/Failure\":\"#BF1B00\",\"/Success\":\"#629E51\"}}},\"P-17\":{\"mapZoom\":1,\"mapCenter\":[12.897489183755892,0]}}",
+  "version": 1,
+  "timeRestore": true,
+  "timeTo": "now",
+  "timeFrom": "now-24h",
+  "refreshInterval": {
+    "display": "Off",
+    "pause": false,
+    "value": 0
+  },
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}],\"highlightAll\":true,\"version\":true}"
+  }
+}
+}
+]
+}
